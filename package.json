@@ -1,0 +1,26 @@
+{
+  "name": "so-yummy",
+  "version": "1.1.0",
+  "description": "",
+  "homepage": "https://github.com/JulitaZochowska/so-yummy",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url so-yummy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulitaZochowska/so-yummy.git"
+  },
+  "keywords": [],
+  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JulitaZochowska/so-yummy/issues"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3",
+    "posthtml-include": "^1.7.4"
+  }
+}
