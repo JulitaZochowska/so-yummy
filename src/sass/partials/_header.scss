@@ -1,0 +1,196 @@
+.header {
+  position: relative;
+  min-width: 320px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  // background-color: $backgroundGreen;
+  margin: 0px;
+  padding: 0px;
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: $greenNormalState;
+    border-radius: 12px;
+    margin: 3px 0px 3px 0px;
+    &__img {
+      width: 28px;
+      height: 28px;
+    }
+  }
+  &__topContainer {
+    width: 100%;
+    padding: 18px 16px 0px 16px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__rightSide {
+      margin: 0px;
+
+      display: flex;
+      align-items: center;
+      &__user {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        &__picture {
+          display: flex;
+          height: 34px;
+          width: 34px;
+          border-radius: 50%;
+          background-color: black;
+        }
+        &__name {
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 1.66;
+          color: $darkNormalState;
+        }
+        &__name:hover {
+          color: $greenNormalState;
+        }
+      }
+      &__hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        margin-left: 24px;
+        color: #fafafa;
+
+        &__img {
+          width: 21px;
+          height: 14px;
+        }
+      }
+    }
+  }
+  &__modalUser {
+    border: 1px solid $greenNormalState;
+    top: 72px;
+    right: 60px;
+    position: absolute;
+    width: 161px;
+    height: 130px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    &__editProfile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      justify-content: center;
+      margin: 18px 18px 0px 18px;
+      &__a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &__text {
+        margin: 0px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.57;
+        color: $darkNormalState;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &__pen {
+        width: 14px;
+        height: 14px;
+        margin-left: 37px;
+      }
+    }
+    &__button {
+      height: 43px;
+      width: 125px;
+      border: none;
+
+      margin: 28px 18px 0px 18px;
+      background-image: url(/src/images/header/header-modal-button.png);
+      background-size: 125px 43px;
+    }
+  }
+
+  &__modalMenu {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: $backgroundGreen;
+    background-size: 360px 550px;
+    background-repeat: no-repeat;
+    min-width: 375px;
+    &__background {
+      margin: 0px;
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      height: 360px;
+      width: 360px;
+      background-image: url(/src/images/header/pasta-spinach-dip\ x2.png);
+      background-size: 360px 360px;
+    }
+    &__topLogoAndX {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 18px;
+      padding: 0px 16px 0px 16px;
+      cursor: pointer;
+
+      &__a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+      }
+      &__x {
+        width: 13px;
+        height: 13px;
+      }
+    }
+
+    &__menu {
+      background-color: $backgroundGreen;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      margin: 124px 130px 248px 130px;
+      gap: 32px;
+      min-width: 375px;
+      &__text {
+        color: $darkNormalState;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1;
+      }
+      &__text:hover {
+        color: $greenNormalState;
+      }
+    }
+  }
+}
+.invisible {
+  display: none;
+}

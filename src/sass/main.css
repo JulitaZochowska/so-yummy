@@ -1,0 +1,211 @@
+body {
+  font-family: "Poppins";
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container,
+div,
+section {
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header {
+  position: relative;
+  min-width: 320px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+}
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(139, 170, 54);
+  border-radius: 12px;
+  margin: 3px 0px 3px 0px;
+}
+.header__logo__img {
+  width: 28px;
+  height: 28px;
+}
+.header__topContainer {
+  width: 100%;
+  padding: 18px 16px 0px 16px;
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__topContainer__rightSide {
+  margin: 0px;
+  display: flex;
+  align-items: center;
+}
+.header__topContainer__rightSide__user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.header__topContainer__rightSide__user__picture {
+  display: flex;
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  background-color: black;
+}
+.header__topContainer__rightSide__user__name {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.66;
+  color: rgb(34, 37, 42);
+}
+.header__topContainer__rightSide__user__name:hover {
+  color: rgb(139, 170, 54);
+}
+.header__topContainer__rightSide__hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-left: 24px;
+  color: #fafafa;
+}
+.header__topContainer__rightSide__hamburger__img {
+  width: 21px;
+  height: 14px;
+}
+.header__modalUser {
+  border: 1px solid rgb(139, 170, 54);
+  top: 72px;
+  right: 60px;
+  position: absolute;
+  width: 161px;
+  height: 130px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.header__modalUser__editProfile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  margin: 18px 18px 0px 18px;
+}
+.header__modalUser__editProfile__a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__modalUser__editProfile__text {
+  margin: 0px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.57;
+  color: rgb(34, 37, 42);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__modalUser__editProfile__pen {
+  width: 14px;
+  height: 14px;
+  margin-left: 37px;
+}
+.header__modalUser__button {
+  height: 43px;
+  width: 125px;
+  border: none;
+  margin: 28px 18px 0px 18px;
+  background-image: url(/src/images/header/header-modal-button.png);
+  background-size: 125px 43px;
+}
+.header__modalMenu {
+  position: absolute;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(235, 243, 212);
+  background-size: 360px 550px;
+  background-repeat: no-repeat;
+  min-width: 375px;
+}
+.header__modalMenu__background {
+  margin: 0px;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  height: 360px;
+  width: 360px;
+  background-image: url(/src/images/header/pasta-spinach-dip\ x2.png);
+  background-size: 360px 360px;
+}
+.header__modalMenu__topLogoAndX {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+  padding: 0px 16px 0px 16px;
+  cursor: pointer;
+}
+.header__modalMenu__topLogoAndX__a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.header__modalMenu__topLogoAndX__x {
+  width: 13px;
+  height: 13px;
+}
+.header__modalMenu__menu {
+  background-color: rgb(235, 243, 212);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin: 124px 130px 248px 130px;
+  gap: 32px;
+  min-width: 375px;
+}
+.header__modalMenu__menu__text {
+  color: rgb(34, 37, 42);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
+}
+.header__modalMenu__menu__text:hover {
+  color: rgb(139, 170, 54);
+}
+
+.invisible {
+  display: none;
+}/*# sourceMappingURL=main.css.map */
