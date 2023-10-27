@@ -1,0 +1,18 @@
+.categories-container {
+  width: 750px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.categories-header {
+  padding-top: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #001833;
+}
