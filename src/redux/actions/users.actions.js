@@ -9,10 +9,6 @@ const setHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
 
-const clearHeader = () => {
-  axios.defaults.headers.common.Authorization = '';
-};
-
 export const register = createAsyncThunk(
   'AUTH/REGISTER',
   async (credentials, thunkAPI) => {
