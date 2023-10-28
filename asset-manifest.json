@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/so-yummy/static/css/main.44637245.css",
-    "main.js": "/so-yummy/static/js/main.aa47c1c8.js",
+    "main.css": "/so-yummy/static/css/main.2235b340.css",
+    "main.js": "/so-yummy/static/js/main.9ab919d1.js",
     "static/media/start-background-desktop@3x.png": "/so-yummy/static/media/start-background-desktop@3x.b44aa071e445db97d450.png",
     "static/media/start-background-tablet@3x.png": "/so-yummy/static/media/start-background-tablet@3x.0fa9cc358074087598db.png",
     "static/media/start-background-desktop@2x.png": "/so-yummy/static/media/start-background-desktop@2x.95a6812a2965bbcc8206.png",
@@ -21,17 +21,19 @@
     "static/media/singin-image-tablet.png": "/so-yummy/static/media/singin-image-tablet.57747d151bef3d734871.png",
     "static/media/logo-mobile.svg": "/so-yummy/static/media/logo-mobile.f50029e1cb9edc825efe6c1ffca0bfb8.svg",
     "index.html": "/so-yummy/index.html",
-    "static/media/mail-icon.svg": "/so-yummy/static/media/mail-icon.35a46732cad84cb6659df04d33d07ea7.svg",
-    "static/media/password-icon.svg": "/so-yummy/static/media/password-icon.4774b3f668c78c8d70f4cf92784fb9a3.svg",
-    "static/media/user-icon.svg": "/so-yummy/static/media/user-icon.2050c7f694e4127fe46cfed5efd56905.svg",
+    "static/media/email-icon.svg": "/so-yummy/static/media/email-icon.87942ff2fbd4b6724b81d1a9a42f0423.svg",
+    "static/media/password-icon.svg": "/so-yummy/static/media/password-icon.7dff82459d9d5984414d39c065461c70.svg",
+    "static/media/invalid-state.svg": "/so-yummy/static/media/invalid-state.c5d5b0620deb1e401f4edd9319d00a6d.svg",
+    "static/media/user-icon.svg": "/so-yummy/static/media/user-icon.0bcb1f6d96ee2033cca8d6c2a4694fd9.svg",
+    "static/media/valid-state.svg": "/so-yummy/static/media/valid-state.f0ba5916408273f67aa8bcb8d67e35c6.svg",
     "static/media/signin-background-mobile.svg": "/so-yummy/static/media/signin-background-mobile.f99661f669b9f31a6859.svg",
     "static/media/signin-background-tablet.svg": "/so-yummy/static/media/signin-background-tablet.2fa2dc91ab5bc94d35b9.svg",
     "static/media/signin-background-desktop.svg": "/so-yummy/static/media/signin-background-desktop.d5d5440654b186017dda.svg",
-    "main.44637245.css.map": "/so-yummy/static/css/main.44637245.css.map",
-    "main.aa47c1c8.js.map": "/so-yummy/static/js/main.aa47c1c8.js.map"
+    "main.2235b340.css.map": "/so-yummy/static/css/main.2235b340.css.map",
+    "main.9ab919d1.js.map": "/so-yummy/static/js/main.9ab919d1.js.map"
   },
   "entrypoints": [
-    "static/css/main.44637245.css",
-    "static/js/main.aa47c1c8.js"
+    "static/css/main.2235b340.css",
+    "static/js/main.9ab919d1.js"
   ]
 }
