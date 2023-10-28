@@ -36,7 +36,7 @@ const RegisterForm = () => {
     const { value } = event.target;
     if (value.length === 0) {
       setIsNameValid('neutral');
-    } else if (value.length < 3) {
+    } else if (value.length < 3 || !/^[a-zA-Z0-9]+$/.test(value)) {
       setIsNameValid('invalid');
     } else {
       setIsNameValid('valid');
@@ -110,6 +110,8 @@ const RegisterForm = () => {
               placeholder="Name"
               name="name"
               required
+              pattern="[a-zA-Z0-9]{3,}"
+              title="Name must be at least 3 characters long, containing only letters and numbers."
               onChange={handleNameChange}
             ></input>
             <Name
@@ -196,6 +198,8 @@ const RegisterForm = () => {
               placeholder="Password"
               name="password"
               required
+              pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+              title="The password must contain at least one capital letter, one digit, one special character, and be at least 8 characters long."
               onChange={handlePasswordChange}
             ></input>
             <p
