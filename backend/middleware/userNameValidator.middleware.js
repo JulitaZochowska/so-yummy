@@ -3,7 +3,7 @@ const Joi = require('joi');
 const userNameSchema = Joi.object({
   name: Joi.string()
     .required()
-    .pattern(new RegExp('^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]{3,30}$')),
+    .pattern(new RegExp('^(?=.*[a-zA-Z])[a-zA-Z0-9]{3,30}$')),
 });
 
 const userNameValidator = (req, res, next) => {
