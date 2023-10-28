@@ -1,0 +1,40 @@
+.signinPage {
+  padding: 87px 20px 118px 20px;
+  width: 100%;
+  min-height: 812px;
+  height: 100vh;
+  background-color: #fafafa;
+  background-image: url(../../images/signin-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .signinPage {
+    padding: 96px 20px 59px 20px;
+    min-height: 1024px;
+    background-image: url(../../images/signin-background-tablet.svg);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .signinPage {
+    padding: 115px 0 123px 0;
+    min-height: 770px;
+    background-image: url(../../images/signin-background-desktop.svg);
+  }
+  .container {
+    max-width: 1280px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}

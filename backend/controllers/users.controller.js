@@ -1,0 +1,109 @@
+const {
+  createUser,
+  getUser,
+  updateUser,
+} = require('../service/users.service.js');
+const { generateToken } = require('../service/auth.service.js');
+const { sendVerificationMessage } = require('../service/mailer.service.js');
+
+const registerHandler = async (req, res, next) => {
+  try {
+    const { name, email, password } = req.body;
+    const { verifyToken } = await createUser({
+      name,
+      email,
+      password,
+    });
+
+    await sendVerificationMessage(email, verifyToken);
+
+    return res.status(201).json({
+      status: 'success',
+      code: 201,
+      message: 'User created',
+      data: {
+        name: name,
+        email: email,
+      },
+    });
+  } catch (error) {
+    console.error(error);
+    if (error.message === 'Conflict') {
+      return res.status(409).json({
+        status: 'error',
+        code: 409,
+        message: 'Email is already in use',
+        data: 'Conflict',
+      });
+    }
+    return next(error);
+  }
+};
+
+const signInHandler = async (req, res, next) => {
+  try {
+    const user = await getUser({ email: req.body.email });
+    const isPasswordValid = await user.validatePassword(req.body.password);
+    if (!user || !isPasswordValid) {
+      return res.status(401).json({
+        status: 'Unauthorized',
+        code: 401,
+        message: 'Incorrect email or password',
+      });
+    }
+
+    const userPayload = {
+      _id: user._id,
+      email: user.email,
+      name: user.name,
+    };
+
+    const token = generateToken(userPayload);
+    await updateUser(user._id, { token });
+
+    return res.status(200).json({
+      status: 'OK',
+      code: 200,
+      token: token,
+      user: {
+        name: userPayload.name,
+        email: userPayload.email,
+      },
+    });
+  } catch (error) {
+    console.error(error);
+    return next(error);
+  }
+};
+
+const accountVerifyHandler = async (req, res, next) => {
+  try {
+    const { verifyToken } = req.params;
+    const user = await getUser({ verifyToken });
+
+    if (!user) {
+      return res.status(404).json({
+        status: 'Not Found',
+        code: 404,
+        message: 'Verification token is invalid or user does not exist',
+      });
+    }
+
+    await updateUser(user._id, { verified: true, verifyToken: null });
+
+    return res.status(200).json({
+      status: 'OK',
+      code: 200,
+      message: 'Verification successful',
+    });
+  } catch (error) {
+    console.error(error);
+    return next(error);
+  }
+};
+
+module.exports = {
+  registerHandler,
+  signInHandler,
+  accountVerifyHandler,
+};
