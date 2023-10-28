@@ -1,6 +1,8 @@
-import name from '../../images/user-icon.svg';
-import email from '../../images/mail-icon.svg';
-import password from '../../images/password-icon.svg';
+import { ReactComponent as Name } from '../../images/user-icon.svg';
+import { ReactComponent as Email } from '../../images/email-icon.svg';
+import { ReactComponent as Password } from '../../images/password-icon.svg';
+import { ReactComponent as Invalid } from '../../images/invalid-state.svg';
+import { ReactComponent as Valid } from '../../images/valid-state.svg';
 import css from './RegisterForm.module.css';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -63,7 +65,9 @@ const RegisterForm = () => {
                 name="name"
                 required
               ></input>
-              <img className={css.icon} src={name} alt="user icon" />
+              <Name className={css.icon} />
+              <Valid className={css.iconValid} />
+              <Invalid className={css.iconInvalid} />
             </li>
             <li className={css.item}>
               <input
@@ -73,7 +77,8 @@ const RegisterForm = () => {
                 name="email"
                 required
               ></input>
-              <img className={css.icon} src={email} alt="email icon" />
+              <Email className={css.icon} />
+              <Invalid className={css.iconInvalid} />
             </li>
             <li className={css.item}>
               <input
@@ -83,7 +88,8 @@ const RegisterForm = () => {
                 name="password"
                 required
               ></input>
-              <img className={css.icon} src={password} alt="email icon" />
+              <Password className={css.icon} />
+              <Invalid className={css.iconInvalid} />
             </li>
           </ul>
         </div>

@@ -26,3 +26,20 @@ export const register = createAsyncThunk(
     }
   }
 );
+export const signIn = createAsyncThunk(
+  'AUTH/SIGNIN',
+  async (credentials, thunkAPI) => {
+    try {
+      const { data } = await axios.post('/users/signin', credentials);
+      setHeader(data.token);
+      return data;
+    } catch (error) {
+      if (error.code === 401) {
+        toast.error('The email address or password is incorrect.', {
+          position: toast.POSITION.TOP_CENTER,
+        });
+      }
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);

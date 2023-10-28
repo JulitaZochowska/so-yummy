@@ -1,12 +1,35 @@
-import email from '../../images/mail-icon.svg';
-import password from '../../images/password-icon.svg';
+import { ReactComponent as Email } from '../../images/email-icon.svg';
+import { ReactComponent as Password } from '../../images/password-icon.svg';
+import { ReactComponent as Invalid } from '../../images/invalid-state.svg';
+import { ReactComponent as Valid } from '../../images/valid-state.svg';
 import css from './SigninForm.module.css';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { signIn } from 'redux/actions/users.actions';
 
 const SigninForm = () => {
+  const dispatch = useDispatch();
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    dispatch(
+      signIn({
+        email: form.elements.email.value,
+        password: form.elements.password.value,
+      })
+    );
+
+    form.reset();
+  };
   return (
     <div className={css.container}>
-      <form className={css.form} name="signinForm" autoComplete="off">
+      <form
+        className={css.form}
+        name="signinForm"
+        autoComplete="off"
+        onSubmit={handleSubmit}
+      >
         <div role="group" aria-labelledby="signinForm-head">
           <h3 className={css.formHeadline} id="signinForm-head">
             Sign in
@@ -17,16 +40,22 @@ const SigninForm = () => {
                 className={css.input}
                 type="email"
                 placeholder="Email"
+                name="email"
               ></input>
-              <img className={css.icon} src={email} alt="email icon" />
+              <Email className={css.icon} />
+              <Valid className={css.iconValid} />
+              <Invalid className={css.iconInvalid} />
             </li>
             <li className={css.item}>
               <input
                 className={css.input}
                 type="password"
                 placeholder="Password"
+                name="password"
               ></input>
-              <img className={css.icon} src={password} alt="email icon" />
+              <Password className={css.icon} />
+              <Valid className={css.iconValid} />
+              <Invalid className={css.iconInvalid} />
             </li>
           </ul>
         </div>

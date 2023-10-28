@@ -22,8 +22,8 @@ const RegisterPage = () => {
           alt="Register hero"
         />
         <RegisterForm />
-        <ToastContainer autoClose={4000} />
       </div>
+      <ToastContainer autoClose={4000} />
     </section>
   );
 };

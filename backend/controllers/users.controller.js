@@ -1,16 +1,21 @@
-const { createUser, getUser } = require('../service/users.service.js');
+const {
+  createUser,
+  getUser,
+  updateUser,
+} = require('../service/users.service.js');
+const { generateToken } = require('../service/auth.service.js');
 const { sendVerificationMessage } = require('../service/mailer.service.js');
 
 const registerHandler = async (req, res, next) => {
   try {
     const { name, email, password } = req.body;
-    const { newsletter, verificationToken } = await createUser({
+    const { verifyToken } = await createUser({
       name,
       email,
       password,
     });
 
-    await sendVerificationMessage(email, verificationToken);
+    await sendVerificationMessage(email, verifyToken);
 
     return res.status(201).json({
       status: 'success',
@@ -19,7 +24,6 @@ const registerHandler = async (req, res, next) => {
       data: {
         name: name,
         email: email,
-        newsletter: newsletter,
       },
     });
   } catch (error) {
@@ -47,18 +51,11 @@ const signInHandler = async (req, res, next) => {
         message: 'Incorrect email or password',
       });
     }
-    if (!user.verified) {
-      return res.status(403).json({
-        status: 'Forbidden',
-        code: 403,
-        message: 'User not verified',
-      });
-    }
+
     const userPayload = {
       _id: user._id,
       email: user.email,
-      subscription: user.subscription,
-      avatar: user.avatarURL,
+      name: user.name,
     };
 
     const token = generateToken(userPayload);
@@ -69,9 +66,35 @@ const signInHandler = async (req, res, next) => {
       code: 200,
       token: token,
       user: {
+        name: userPayload.name,
         email: userPayload.email,
-        subscription: userPayload.subscription,
       },
+    });
+  } catch (error) {
+    console.error(error);
+    return next(error);
+  }
+};
+
+const accountVerifyHandler = async (req, res, next) => {
+  try {
+    const { verifyToken } = req.params;
+    const user = await getUser({ verifyToken });
+
+    if (!user) {
+      return res.status(404).json({
+        status: 'Not Found',
+        code: 404,
+        message: 'Verification token is invalid or user does not exist',
+      });
+    }
+
+    await updateUser(user._id, { verified: true, verifyToken: null });
+
+    return res.status(200).json({
+      status: 'OK',
+      code: 200,
+      message: 'Verification successful',
     });
   } catch (error) {
     console.error(error);
@@ -82,4 +105,5 @@ const signInHandler = async (req, res, next) => {
 module.exports = {
   registerHandler,
   signInHandler,
+  accountVerifyHandler,
 };

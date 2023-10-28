@@ -28,9 +28,15 @@
 .item {
   position: relative;
 }
-.item:focus-within {
+.item:is(:hover, :focus-within) {
   .icon {
+    color: #fff;
     opacity: 1;
+  }
+}
+.item:is(:hover, :focus-within) {
+  .iconInvalid {
+    opacity: 0;
   }
 }
 .item:not(:last-child) {
@@ -72,11 +78,30 @@
   transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
   transition-property: opacity;
 }
-.input:is(:hover, :focus-within) {
+.input:is(:hover, :focus) {
   border: 1px solid #fff;
   opacity: 1;
 }
-.input:is(:hover, :focus-visible)::placeholder {
+.input:is(:hover, :focus)::placeholder {
+  opacity: 1;
+}
+.input:invalid:focus {
+  border: 1px solid #e74a3b;
+}
+.item .input:invalid:focus + .icon {
+  stroke: #e74a3b;
+}
+.item .input:invalid:focus + .icon + .iconInvalid {
+  opacity: 1;
+  display: block;
+}
+.input:valid:focus {
+  border: 1px solid #3cbc81;
+}
+.item .input:valid:focus + .icon {
+  stroke: #3cbc81;
+}
+.item .input:valid:focus + .icon + .iconValid {
   opacity: 1;
 }
 .icon {
@@ -87,6 +112,28 @@
   top: 50%;
   transform: translateY(-50%);
   opacity: 0.8;
+  stroke: #fafafa;
+  transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition-property: stroke;
+}
+.iconInvalid {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  display: none;
+  transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition-property: opacity;
+}
+.iconValid {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition-property: opacity;
 }
 .button {
   border-radius: 6px;
