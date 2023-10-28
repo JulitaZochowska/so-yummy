@@ -34,8 +34,8 @@ export const signIn = createAsyncThunk(
       setHeader(data.token);
       return data;
     } catch (error) {
-      if (error.code === 401) {
-        toast.error('The email address or password is incorrect.', {
+      if (error.message === 'Request failed with status code 401') {
+        toast.error('Incorrect email or password', {
           position: toast.POSITION.TOP_CENTER,
         });
       }
