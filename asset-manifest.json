@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/so-yummy/static/css/main.2235b340.css",
-    "main.js": "/so-yummy/static/js/main.9ab919d1.js",
+    "main.css": "/so-yummy/static/css/main.ea889dbd.css",
+    "main.js": "/so-yummy/static/js/main.86c996b3.js",
     "static/media/start-background-desktop@3x.png": "/so-yummy/static/media/start-background-desktop@3x.b44aa071e445db97d450.png",
     "static/media/start-background-tablet@3x.png": "/so-yummy/static/media/start-background-tablet@3x.0fa9cc358074087598db.png",
     "static/media/start-background-desktop@2x.png": "/so-yummy/static/media/start-background-desktop@2x.95a6812a2965bbcc8206.png",
@@ -29,11 +29,11 @@
     "static/media/signin-background-mobile.svg": "/so-yummy/static/media/signin-background-mobile.f99661f669b9f31a6859.svg",
     "static/media/signin-background-tablet.svg": "/so-yummy/static/media/signin-background-tablet.2fa2dc91ab5bc94d35b9.svg",
     "static/media/signin-background-desktop.svg": "/so-yummy/static/media/signin-background-desktop.d5d5440654b186017dda.svg",
-    "main.2235b340.css.map": "/so-yummy/static/css/main.2235b340.css.map",
-    "main.9ab919d1.js.map": "/so-yummy/static/js/main.9ab919d1.js.map"
+    "main.ea889dbd.css.map": "/so-yummy/static/css/main.ea889dbd.css.map",
+    "main.86c996b3.js.map": "/so-yummy/static/js/main.86c996b3.js.map"
   },
   "entrypoints": [
-    "static/css/main.2235b340.css",
-    "static/js/main.9ab919d1.js"
+    "static/css/main.ea889dbd.css",
+    "static/js/main.86c996b3.js"
   ]
 }
