@@ -78,30 +78,43 @@
   transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
   transition-property: opacity;
 }
-.input:is(:hover, :focus) {
-  border: 1px solid #fff;
+.inputInvalid {
+  width: 100%;
+  padding: 12px 14px 12px 40px;
+  background-color: transparent;
+  border: 1px solid #e74a3b;
+  border-radius: 6px;
+  color: #fafafa;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  outline: none;
   opacity: 1;
+  transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition-property: border, opacity;
+}
+.inputValid {
+  width: 100%;
+  padding: 12px 14px 12px 40px;
+  background-color: transparent;
+  border: 1px solid #3cbc81;
+  border-radius: 6px;
+  color: #fafafa;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  outline: none;
+  opacity: 1;
+  transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition-property: border, opacity;
 }
 .input:is(:hover, :focus)::placeholder {
   opacity: 1;
 }
-.input:invalid:focus {
-  border: 1px solid #e74a3b;
-}
-.item .input:invalid:focus + .icon {
-  stroke: #e74a3b;
-}
-.item .input:invalid:focus + .icon + .iconInvalid {
-  opacity: 1;
-  display: block;
-}
-.input:valid:focus {
-  border: 1px solid #3cbc81;
-}
-.item .input:valid:focus + .icon {
-  stroke: #3cbc81;
-}
-.item .input:valid:focus + .icon + .iconValid {
+.input:is(:hover, :focus) {
+  border: 1px solid #fff;
   opacity: 1;
 }
 .icon {
@@ -116,7 +129,31 @@
   transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
   transition-property: stroke;
 }
-.iconInvalid {
+.iconRed {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  stroke: #e74a3b;
+  transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition-property: stroke;
+}
+.iconGreen {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  stroke: #3cbc81;
+  transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition-property: stroke;
+}
+.iconHide {
   position: absolute;
   right: 14px;
   top: 50%;
@@ -126,12 +163,13 @@
   transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
   transition-property: opacity;
 }
-.iconValid {
+.iconShow {
   position: absolute;
   right: 14px;
   top: 50%;
   transform: translateY(-50%);
-  opacity: 0;
+  opacity: 1;
+  display: block;
   transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
   transition-property: opacity;
 }
@@ -195,10 +233,32 @@
     font-size: 18px;
     letter-spacing: -0.36px;
   }
+  .inputInvalid {
+    padding: 16px 18px 16px 50px;
+    font-size: 18px;
+    letter-spacing: -0.36px;
+  }
+  .inputValid {
+    padding: 16px 18px 16px 50px;
+    font-size: 18px;
+    letter-spacing: -0.36px;
+  }
   .input::placeholder {
     font-size: 18px;
   }
   .icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 18px;
+  }
+  .iconRed {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 18px;
+  }
+  .iconGreen {
     width: 24px;
     height: 24px;
     position: absolute;

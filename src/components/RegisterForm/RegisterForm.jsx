@@ -9,10 +9,14 @@ import { useDispatch } from 'react-redux';
 import { register } from 'redux/actions/users.actions';
 import { selectRegistered } from 'redux/selectors/users.selectors';
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
   const isRegistered = useSelector(selectRegistered);
+  const [isNameValid, setIsNameValid] = useState('neutral');
+  const [isEmailValid, setIsEmailValid] = useState('neutral');
+  const [isPasswordValid, setIsPasswordValid] = useState('neutral');
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -26,6 +30,43 @@ const RegisterForm = () => {
     );
 
     form.reset();
+  };
+
+  const handleNameChange = event => {
+    const { value } = event.target;
+    if (value.length === 0) {
+      setIsNameValid('neutral');
+    } else if (value.length < 3) {
+      setIsNameValid('invalid');
+    } else {
+      setIsNameValid('valid');
+    }
+  };
+  const handleEmailChange = event => {
+    const { value } = event.target;
+
+    if (value.length === 0) {
+      setIsEmailValid('neutral');
+    } else if (value.includes('@')) {
+      setIsEmailValid('valid');
+    } else {
+      setIsEmailValid('invalid');
+    }
+  };
+  const handlePasswordChange = event => {
+    const { value } = event.target;
+
+    if (value.length === 0) {
+      setIsPasswordValid('neutral');
+    } else if (value.length < 8) {
+      setIsPasswordValid('invalid');
+    } else if (
+      !/(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]/.test(value)
+    ) {
+      setIsPasswordValid('invalid');
+    } else {
+      setIsPasswordValid('valid');
+    }
   };
 
   if (isRegistered) {
@@ -56,42 +97,135 @@ const RegisterForm = () => {
           <h3 className={css.formHeadline} id="register-head">
             Registration
           </h3>
-          <ul>
-            <li className={css.item}>
-              <input
-                className={css.input}
-                type="text"
-                placeholder="Name"
-                name="name"
-                required
-              ></input>
-              <Name className={css.icon} />
-              <Valid className={css.iconValid} />
-              <Invalid className={css.iconInvalid} />
-            </li>
-            <li className={css.item}>
-              <input
-                className={css.input}
-                type="email"
-                placeholder="Email"
-                name="email"
-                required
-              ></input>
-              <Email className={css.icon} />
-              <Invalid className={css.iconInvalid} />
-            </li>
-            <li className={css.item}>
-              <input
-                className={css.input}
-                type="password"
-                placeholder="Password"
-                name="password"
-                required
-              ></input>
-              <Password className={css.icon} />
-              <Invalid className={css.iconInvalid} />
-            </li>
-          </ul>
+          <div className={css.item}>
+            <input
+              className={
+                isNameValid === 'valid'
+                  ? css.inputValid
+                  : isNameValid === 'invalid'
+                  ? css.inputInvalid
+                  : css.input
+              }
+              type="text"
+              placeholder="Name"
+              name="name"
+              required
+              onChange={handleNameChange}
+            ></input>
+            <Name
+              className={
+                isNameValid === 'valid'
+                  ? css.iconGreen
+                  : isNameValid === 'invalid'
+                  ? css.iconRed
+                  : css.icon
+              }
+            />
+            <Invalid
+              className={
+                isNameValid === 'valid'
+                  ? css.iconHide
+                  : isNameValid === 'invalid'
+                  ? css.iconShow
+                  : css.iconHide
+              }
+            />
+            <Valid
+              className={
+                isNameValid === 'valid'
+                  ? css.iconShow
+                  : isNameValid === 'invalid'
+                  ? css.iconHide
+                  : css.iconHide
+              }
+            />
+          </div>
+          <div className={css.item}>
+            <input
+              className={
+                isEmailValid === 'valid'
+                  ? css.inputValid
+                  : isEmailValid === 'invalid'
+                  ? css.inputInvalid
+                  : css.input
+              }
+              type="email"
+              placeholder="Email"
+              name="email"
+              required
+              onChange={handleEmailChange}
+            ></input>
+            <Email
+              className={
+                isEmailValid === 'valid'
+                  ? css.iconGreen
+                  : isEmailValid === 'invalid'
+                  ? css.iconRed
+                  : css.icon
+              }
+            />
+            <Invalid
+              className={
+                isEmailValid === 'valid'
+                  ? css.iconHide
+                  : isEmailValid === 'invalid'
+                  ? css.iconShow
+                  : css.iconHide
+              }
+            />
+            <Valid
+              className={
+                isEmailValid === 'valid'
+                  ? css.iconShow
+                  : isEmailValid === 'invalid'
+                  ? css.iconHide
+                  : css.iconHide
+              }
+            />
+          </div>
+          <div className={css.item}>
+            <input
+              className={
+                isPasswordValid === 'valid'
+                  ? css.inputValid
+                  : isPasswordValid === 'invalid'
+                  ? css.inputInvalid
+                  : css.input
+              }
+              type="password"
+              placeholder="Password"
+              name="password"
+              required
+              onChange={handlePasswordChange}
+            ></input>
+            <Password
+              className={
+                isPasswordValid === 'valid'
+                  ? css.iconGreen
+                  : isPasswordValid === 'invalid'
+                  ? css.iconRed
+                  : css.icon
+              }
+            />
+            <Invalid
+              className={
+                isPasswordValid === 'valid'
+                  ? css.iconHide
+                  : isPasswordValid === 'invalid'
+                  ? css.iconShow
+                  : css.iconHide
+              }
+            />
+            <Valid
+              className={
+                isPasswordValid === 'valid'
+                  ? css.iconShow
+                  : isPasswordValid === 'invalid'
+                  ? css.iconHide
+                  : css.iconHide
+              }
+            />
+          </div>
         </div>
         <button className={css.button} type="submit">
           Sing up
