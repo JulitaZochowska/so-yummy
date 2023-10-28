@@ -157,7 +157,27 @@ const currentUserHandler = async (req, res, next) => {
 const updateUserNameHandler = async (req, res, next) => {
   try {
     const { name } = req.body;
-  } catch (error) {}
+    const updatedUser = await updateUser(req.user._id, { name });
+
+    if (!updatedUser) {
+      return res.status(404).json({
+        status: 'fail',
+        code: 404,
+        message: 'User not found',
+      });
+    }
+
+    res.status(200).json({
+      status: 'success',
+      code: 200,
+      data: {
+        updatedUser,
+      },
+    });
+  } catch (error) {
+    console.error(error);
+    return next(error);
+  }
 };
 
 module.exports = {
@@ -166,4 +186,5 @@ module.exports = {
   accountVerifyHandler,
   logOutHandler,
   currentUserHandler,
+  updateUserNameHandler,
 };
