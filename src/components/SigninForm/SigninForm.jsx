@@ -1,7 +1,5 @@
 import { ReactComponent as Email } from '../../images/email-icon.svg';
 import { ReactComponent as Password } from '../../images/password-icon.svg';
-import { ReactComponent as Invalid } from '../../images/invalid-state.svg';
-import { ReactComponent as Valid } from '../../images/valid-state.svg';
 import css from './SigninForm.module.css';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -43,8 +41,6 @@ const SigninForm = () => {
                 name="email"
               ></input>
               <Email className={css.icon} />
-              <Valid className={css.iconValid} />
-              <Invalid className={css.iconInvalid} />
             </li>
             <li className={css.item}>
               <input
@@ -54,8 +50,6 @@ const SigninForm = () => {
                 name="password"
               ></input>
               <Password className={css.icon} />
-              <Valid className={css.iconValid} />
-              <Invalid className={css.iconInvalid} />
             </li>
           </ul>
         </div>
