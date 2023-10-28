@@ -102,8 +102,22 @@ const accountVerifyHandler = async (req, res, next) => {
   }
 };
 
+const logOutHandler = async (req, res, next) => {
+  try {
+    await updateUser(req.user._id, { token: null });
+
+    return res.status(204).json({
+      status: 'OK',
+      code: 204,
+    });
+  } catch (error) {
+    return next(error);
+  }
+};
+
 module.exports = {
   registerHandler,
   signInHandler,
   accountVerifyHandler,
+  logOutHandler,
 };
