@@ -26,6 +26,7 @@ export const register = createAsyncThunk(
     }
   }
 );
+
 export const signIn = createAsyncThunk(
   'AUTH/SIGNIN',
   async (credentials, thunkAPI) => {
@@ -39,6 +40,22 @@ export const signIn = createAsyncThunk(
           position: toast.POSITION.TOP_CENTER,
         });
       }
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const refreshUser = createAsyncThunk(
+  'AUTH/REFRESH_USER',
+  async (_, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const token = state.auth.token;
+    setHeader(token);
+    try {
+      // const response = await axios.get('/users/current');
+      // return response.data;
+    } catch (error) {
+      console.log(error, 'error');
       return thunkAPI.rejectWithValue(error.message);
     }
   }
