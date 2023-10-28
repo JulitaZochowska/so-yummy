@@ -1,13 +1,32 @@
 const Joi = require('joi');
 
-const userSchema = Joi.object({
+const userRegistrationSchema = Joi.object({
   name: Joi.string().required(),
   email: Joi.string().required(),
   password: Joi.string().required(),
 });
 
-const userDataValidator = (req, res, next) => {
-  const { error } = userSchema.validate(req.body);
+const userSignInSchema = Joi.object({
+  email: Joi.string().required(),
+  password: Joi.string().required(),
+});
+
+const userRegisterValidator = (req, res, next) => {
+  const { error } = userRegistrationSchema.validate(req.body);
+
+  if (error) {
+    return res.status(400).json({
+      status: 'error',
+      code: 400,
+      message: error.message,
+    });
+  }
+
+  return next();
+};
+
+const userSignInValidator = (req, res, next) => {
+  const { error } = userSignInSchema.validate(req.body);
 
   if (error) {
     return res.status(400).json({
@@ -21,5 +40,6 @@ const userDataValidator = (req, res, next) => {
 };
 
 module.exports = {
-  userDataValidator,
+  userRegisterValidator,
+  userSignInValidator,
 };

@@ -28,9 +28,15 @@
 .item {
   position: relative;
 }
-.item:focus-within {
+.item:is(:hover, :focus-within) {
   .icon {
+    color: #fff;
     opacity: 1;
+  }
+}
+.item:is(:hover, :focus-within) {
+  .iconInvalid {
+    opacity: 0;
   }
 }
 .item:not(:last-child) {
@@ -45,6 +51,29 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.28px;
+  position: absolute;
+  bottom: -36px;
+  opacity: 0;
+}
+.noticeRed {
+  color: #e74a3b;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  position: absolute;
+  bottom: -36px;
+  opacity: 1;
+}
+.noticeGreen {
+  color: #3cbc81;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  position: absolute;
+  bottom: -36px;
+  opacity: 1;
 }
 .input {
   width: 100%;
@@ -72,11 +101,43 @@
   transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
   transition-property: opacity;
 }
-.input:is(:hover, :focus-within) {
-  border: 1px solid #fff;
+.inputInvalid {
+  width: 100%;
+  padding: 12px 14px 12px 40px;
+  background-color: transparent;
+  border: 1px solid #e74a3b;
+  border-radius: 6px;
+  color: #fafafa;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  outline: none;
+  opacity: 1;
+  transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition-property: border, opacity;
+}
+.inputValid {
+  width: 100%;
+  padding: 12px 14px 12px 40px;
+  background-color: transparent;
+  border: 1px solid #3cbc81;
+  border-radius: 6px;
+  color: #fafafa;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  outline: none;
+  opacity: 1;
+  transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition-property: border, opacity;
+}
+.input:is(:hover, :focus)::placeholder {
   opacity: 1;
 }
-.input:is(:hover, :focus-visible)::placeholder {
+.input:is(:hover, :focus) {
+  border: 1px solid #fff;
   opacity: 1;
 }
 .icon {
@@ -87,6 +148,53 @@
   top: 50%;
   transform: translateY(-50%);
   opacity: 0.8;
+  stroke: #fafafa;
+  transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition-property: stroke;
+}
+.iconRed {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  stroke: #e74a3b;
+  transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition-property: stroke;
+}
+.iconGreen {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  stroke: #3cbc81;
+  transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition-property: stroke;
+}
+.iconHide {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  display: none;
+  transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition-property: opacity;
+}
+.iconShow {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  display: block;
+  transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition-property: opacity;
 }
 .button {
   border-radius: 6px;
@@ -139,11 +247,17 @@
   .item:last-child {
     margin-bottom: 50px;
   }
-  .notice {
+  .input {
+    padding: 16px 18px 16px 50px;
     font-size: 18px;
     letter-spacing: -0.36px;
   }
-  .input {
+  .inputInvalid {
+    padding: 16px 18px 16px 50px;
+    font-size: 18px;
+    letter-spacing: -0.36px;
+  }
+  .inputValid {
     padding: 16px 18px 16px 50px;
     font-size: 18px;
     letter-spacing: -0.36px;
@@ -152,6 +266,18 @@
     font-size: 18px;
   }
   .icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 18px;
+  }
+  .iconRed {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 18px;
+  }
+  .iconGreen {
     width: 24px;
     height: 24px;
     position: absolute;

@@ -12,7 +12,7 @@ const createUser = async data => {
     return await User.create({
       ...data,
       verified: false,
-      verificationToken: nanoid(24),
+      verifyToken: nanoid(24),
     });
   } catch (error) {
     if (error.code === 11000) {
@@ -33,8 +33,18 @@ const getUser = async filter => {
   }
 };
 
+const updateUser = async (_id, data) => {
+  try {
+    return await User.findByIdAndUpdate(_id, data, { new: true });
+  } catch (error) {
+    console.error(error.message);
+    throw new UnknownDatabaseError();
+  }
+};
+
 module.exports = {
   createUser,
   getUser,
+  updateUser,
   UnknownDatabaseError,
 };
