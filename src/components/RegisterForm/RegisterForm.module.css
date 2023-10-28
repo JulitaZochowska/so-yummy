@@ -51,6 +51,29 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.28px;
+  position: absolute;
+  bottom: -36px;
+  opacity: 0;
+}
+.noticeRed {
+  color: #e74a3b;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  position: absolute;
+  bottom: -36px;
+  opacity: 1;
+}
+.noticeGreen {
+  color: #3cbc81;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  position: absolute;
+  bottom: -36px;
+  opacity: 1;
 }
 .input {
   width: 100%;
@@ -223,10 +246,6 @@
   }
   .item:last-child {
     margin-bottom: 50px;
-  }
-  .notice {
-    font-size: 18px;
-    letter-spacing: -0.36px;
   }
   .input {
     padding: 16px 18px 16px 50px;

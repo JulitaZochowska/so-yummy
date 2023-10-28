@@ -198,6 +198,21 @@ const RegisterForm = () => {
               required
               onChange={handlePasswordChange}
             ></input>
+            <p
+              className={
+                isPasswordValid === 'valid'
+                  ? css.noticeGreen
+                  : isPasswordValid === 'invalid'
+                  ? css.noticeRed
+                  : css.notice
+              }
+            >
+              {isPasswordValid === 'valid'
+                ? 'Password is secure'
+                : isPasswordValid === 'invalid'
+                ? 'Enter a valid Password'
+                : ''}
+            </p>
             <Password
               className={
                 isPasswordValid === 'valid'
