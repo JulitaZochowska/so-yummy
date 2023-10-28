@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer');
-const { gmailUser, gmailPassword } = require('../backend/config.js');
+const { gmailUser, gmailPassword } = require('./config.js');
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',

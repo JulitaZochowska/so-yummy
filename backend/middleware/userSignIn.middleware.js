@@ -1,17 +1,14 @@
 const Joi = require('joi');
 
-const userRegistrationSchema = Joi.object({
-  name: Joi.string()
-    .required()
-    .pattern(new RegExp('^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]{3,30}$')),
+const userSignInSchema = Joi.object({
   email: Joi.string().email().required(),
   password: Joi.string()
     .required()
     .pattern(new RegExp('^(?=.*[a-zA-Z0-9])(?=.*[@$!%*?&]).{8,30}$')),
 });
 
-const userRegisterValidator = (req, res, next) => {
-  const { error } = userRegistrationSchema.validate(req.body);
+const userSignInValidator = (req, res, next) => {
+  const { error } = userSignInSchema.validate(req.body);
 
   if (error) {
     return res.status(400).json({
@@ -25,5 +22,5 @@ const userRegisterValidator = (req, res, next) => {
 };
 
 module.exports = {
-  userRegisterValidator,
+  userSignInValidator,
 };

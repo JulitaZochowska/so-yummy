@@ -115,9 +115,55 @@ const logOutHandler = async (req, res, next) => {
   }
 };
 
+const currentUserHandler = async (req, res, next) => {
+  try {
+    const {
+      name,
+      email,
+      newsletter,
+      token,
+      avatar,
+      verified,
+      createdAt,
+      updatedAt,
+    } = await getUser({ email: req.body.email });
+    if (token === null) {
+      return res.status(401).json({
+        status: 'error',
+        code: 401,
+        message: 'Unauthorized',
+      });
+    }
+    return res.status(200).json({
+      status: 'OK',
+      code: 200,
+      user: {
+        name: name,
+        email: email,
+        newsletter: newsletter,
+        token: token,
+        avatar: avatar,
+        verified: verified,
+        created: createdAt,
+        updated: updatedAt,
+      },
+    });
+  } catch (error) {
+    console.error(error);
+    return next(error);
+  }
+};
+
+const updateUserNameHandler = async (req, res, next) => {
+  try {
+    const { name } = req.body;
+  } catch (error) {}
+};
+
 module.exports = {
   registerHandler,
   signInHandler,
   accountVerifyHandler,
   logOutHandler,
+  currentUserHandler,
 };
