@@ -37,12 +37,13 @@ export const HeaderStyledLogoLink = styled(Link)`
     transform: scale(1.06);
   }
   @media (min-width: 768px) {
-    margin-right: 20px;
     width: 44px;
     height: 44px;
+    margin: auto;
   }
-  @media (min-width: 1000px) {
-    margin-right: 194px;
+  @media (min-width: 920px) {
+    // margin-right: 194px;
+    margin: auto;
   }
 `;
 
