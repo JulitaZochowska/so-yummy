@@ -1,0 +1,84 @@
+.CategoriesPage {
+    padding-top: 25px;
+    width: 100%;
+    min-height: 812px;
+    height: 100vh;
+    justify-content: left;
+    margin-left: 100px;
+  }
+  .CategoriesPage_h1 {
+    color: #001833;
+font-feature-settings: 'liga' off;
+font-family: Poppins;
+font-size: 44px;
+font-style: normal;
+font-weight: 600;
+line-height: 44px; /* 100% */
+letter-spacing: -0.88px;
+  }
+  .CategoriesPage_nav {
+    margin-top: 100px;
+    display: flex;
+    width: 1350px;
+    height: 56px;
+    justify-content: space-around;
+    border-bottom: 1px solid #E0E0E0;
+  }
+  .CategoriesPage_nav_h2 {
+    position: relative;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #BDBDBD;
+    display: block;
+  }
+  
+  .CategoriesPage_nav_h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -16px; /* Adjust this value to control the distance from the text */
+    width: 100%;
+    height: 2px; /* Adjust this value to control the thickness of the border */
+    background-color: #8BAA36; /* Color of the border */
+    transition: width 0.1s, opacity 0.1s; /* Add a transition for a smooth effect */
+    opacity: 0; /* Initially, make the border invisible */
+  }
+  .CategoriesPage_nav_h2:hover {
+    color: #8BAA36;
+    cursor: pointer;
+  }
+  .CategoriesPage_nav_h2:hover::after {
+    width: 100%; /* Make the border the same width as the text */
+    opacity: 1; /* Make the border visible on hover */
+  }
+  
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  @media screen and (min-width: 768px) {
+    .CategoriesPage {
+      padding: 96px 20px 59px 20px;
+      min-height: 606px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .CategoriesPage {
+      padding: 115px 0 123px 0;
+      min-height: 770px;
+    }
+    .container {
+      max-width: 1280px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
