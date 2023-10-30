@@ -7,8 +7,12 @@ import {
   BurgerMenuBackgroundContainer,
 } from './BurgerMenu.styled';
 import { useState } from 'react';
-import { BurgerIcon, HeaderLogo, CrossIcon } from './HeaderIcons';
-import { RiSearchLine } from 'react-icons/ri';
+import {
+  BurgerIcon,
+  HeaderLogo,
+  CrossIcon,
+  MagnifyingGlass,
+} from './HeaderIcons';
 
 export const BurgerMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -53,7 +57,7 @@ export const BurgerMenu = () => {
           Shopping list
         </BurgerMenuStyledNavLink>
         <BurgerMenuStyledNavLink onClick={() => closeMenu()} to={'search'}>
-          <RiSearchLine />
+          <MagnifyingGlass />
           Search
         </BurgerMenuStyledNavLink>
         <BurgerMenuBackgroundContainer />

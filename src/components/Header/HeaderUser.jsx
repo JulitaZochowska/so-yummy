@@ -1,10 +1,13 @@
 import { useState, useCallback } from 'react';
-import { HeaderStyledUser, HeaderStyledUserText } from './Header.styled';
-import { FaUserCircle } from 'react-icons/fa';
+import {
+  HeaderStyledUser,
+  HeaderStyledUserText,
+  HeaderStyledUserAvatarConteiner,
+} from './Header.styled';
+
 import { HeaderUserModal } from './HeaderUserModal';
 import { HeaderEditModal } from './HeaderEditModal';
 import { HeaderLogoutModal } from './HeaderLogoutModal';
-
 export const HeaderUser = () => {
   const [showUserModal, setShowUserModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
@@ -37,9 +40,9 @@ export const HeaderUser = () => {
   return (
     <>
       <HeaderStyledUser onClick={openUserModal}>
-        <FaUserCircle />
+        <HeaderStyledUserAvatarConteiner></HeaderStyledUserAvatarConteiner>
 
-        <HeaderStyledUserText></HeaderStyledUserText>
+        <HeaderStyledUserText>Name</HeaderStyledUserText>
       </HeaderStyledUser>
       {showUserModal && (
         <HeaderUserModal

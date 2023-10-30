@@ -10,11 +10,8 @@ import {
 } from './HeaderModals.styled';
 import { CrossIcon } from './HeaderIcons';
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 
 export const HeaderLogoutModal = ({ onClose }) => {
-  const dispatch = useDispatch();
-
   useEffect(() => {
     const handleKeyDown = e => {
       if (e.code === 'Escape') {

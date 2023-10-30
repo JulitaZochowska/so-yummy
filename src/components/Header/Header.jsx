@@ -4,8 +4,7 @@ import {
   HeaderStyledNav,
   HeaderStyledNavLink,
 } from './Header.styled';
-import { HeaderLogo } from './HeaderIcons';
-import { RiSearchLine } from 'react-icons/ri';
+import { HeaderLogo, MagnifyingGlass } from './HeaderIcons';
 import { BurgerMenu } from './BurgerMenu';
 import { HeaderUser } from './HeaderUser';
 
@@ -29,7 +28,7 @@ export const Header = () => {
             Shopping list
           </HeaderStyledNavLink>
           <HeaderStyledNavLink to={'search'}>
-            <RiSearchLine />
+            <MagnifyingGlass />
           </HeaderStyledNavLink>
         </HeaderStyledNav>
         <HeaderUser />

@@ -24,6 +24,25 @@ export const HeaderStyled = styled.header`
     max-width: 704px;
   }
 `;
+export const HeaderStyledUserAvatarConteiner = styled.div`
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  background-color: rgba(217, 217, 217, 1);
+  @media (min-width: 768px) {
+    width: 44px;
+    height: 44px;
+    margin: auto;
+  }
+  @media (min-width: 920px) {
+    // margin-right: 194px;
+    margin: auto;
+  }
+  svg {
+    width: 44px;
+    height: 44px;
+  }
+`;
 
 export const HeaderStyledLogoLink = styled(Link)`
   width: 40px;
@@ -80,22 +99,24 @@ export const HeaderStyledNavLink = styled(NavLink)`
     color: #8baa36;
   }
   svg {
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
   }
-  // @media (max-width: 830px) {
-  //   margin-right: 9px;
-  // }
+  @media (max-width: 830px) {
+    margin-right: 9px;
+  }
 `;
 
 export const HeaderStyledUser = styled.div`
   margin-right: 82px;
   display: flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition-property: color;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   &:hover {
     transform: scale(1.06);
   }
@@ -106,8 +127,8 @@ export const HeaderStyledUser = styled.div`
     margin-right: 52px;
   }
   svg {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     margin-right: 14px;
     fill: #9c9c9c;
     @media (max-width: 477px) {
@@ -137,6 +158,7 @@ export const HeaderStyledUserText = styled.p`
   line-height: 1.5;
   color: #22252a;
   margin: 0;
+  margin-left: 14px;
   @media (min-width: 478px) {
     font-size: 14px;
     line-height: 1.7;

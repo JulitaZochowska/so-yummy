@@ -7,8 +7,7 @@ import {
   HeaderUserModalContainer,
 } from './HeaderModals.styled';
 import { useEffect } from 'react';
-import { FiEdit2 } from 'react-icons/fi';
-import { AiOutlineArrowRight } from 'react-icons/ai';
+import { ArrowRight, Pen } from './HeaderIcons';
 
 export const HeaderUserModal = ({ onClose, editOpen, logOutOpen }) => {
   useEffect(() => {
@@ -41,7 +40,7 @@ export const HeaderUserModal = ({ onClose, editOpen, logOutOpen }) => {
               }}
             >
               Edit profile
-              <FiEdit2></FiEdit2>
+              <Pen />
             </HeaderUserModalEditButton>
             <HeaderUserModalLogoutButton
               onClick={() => {
@@ -50,7 +49,7 @@ export const HeaderUserModal = ({ onClose, editOpen, logOutOpen }) => {
               }}
             >
               Log-out
-              <AiOutlineArrowRight />
+              <ArrowRight />
             </HeaderUserModalLogoutButton>
           </HeaderUserModalContainerStyled>
         </HeaderUserModalBodyStyled>
