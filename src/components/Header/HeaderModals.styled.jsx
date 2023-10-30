@@ -383,7 +383,6 @@ export const HeaderEditModalNameInput = styled.input`
   font-size: 14px;
   line-height: 21px;
   letter-spacing: -0.02em;
-  outline: none;
   width: 282px;
   height: 48px;
   border: 1px solid #afafaf;
