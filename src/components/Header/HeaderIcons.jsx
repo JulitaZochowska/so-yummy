@@ -88,15 +88,15 @@ export const MagnifyingGlass = () => {
     >
       <path
         d="M9.16666 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16666C15.8333 5.48477 12.8486 2.5 9.16666 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16666C2.5 12.8486 5.48477 15.8333 9.16666 15.8333Z"
-        stroke-width="1.6"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M17.5 17.5L13.875 13.875"
-        stroke-width="1.6"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -114,9 +114,9 @@ export const Man = () => {
       <path
         d="M13.5 14.5355C13.5 13.4888 13.5 12.9655 13.3708 12.5397C13.08 11.5809 12.3297 10.8305 11.3709 10.5397C10.945 10.4105 10.4217 10.4105 9.375 10.4105H5.625C4.57833 10.4105 4.05499 10.4105 3.62914 10.5397C2.67034 10.8305 1.92003 11.5809 1.62918 12.5397C1.5 12.9655 1.5 13.4888 1.5 14.5355M10.875 4.41052C10.875 6.27448 9.36396 7.78552 7.5 7.78552C5.63604 7.78552 4.125 6.27448 4.125 4.41052C4.125 2.54656 5.63604 1.03552 7.5 1.03552C9.36396 1.03552 10.875 2.54656 10.875 4.41052Z"
         stroke="#23262A"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -127,9 +127,9 @@ export const Pen = () => {
     <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M1.00364 13.1573C1.04959 12.7438 1.07256 12.537 1.13512 12.3438C1.19062 12.1724 1.26904 12.0092 1.36824 11.8588C1.48006 11.6892 1.62715 11.5421 1.92133 11.2479L11.0443 2.12498C11.8267 1.34258 13.0952 1.34258 13.8776 2.12498V2.12498C14.66 2.90738 14.66 4.17591 13.8776 4.95831L4.75466 14.0813C4.46048 14.3754 4.31339 14.5225 4.14382 14.6343C3.99338 14.7335 3.83023 14.812 3.65878 14.8675C3.46554 14.93 3.2588 14.953 2.8453 14.9989L0.773438 15.2291L1.00364 13.1573Z"
-        stroke-width="1.3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -147,16 +147,16 @@ export const ArrowRight = () => {
       <path
         d="M2.75 9.5H12.75"
         stroke="#FAFAFA"
-        stroke-width="1.3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M9 4.25L14.25 9.5L9 14.75"
         stroke="#FAFAFA"
-        stroke-width="1.3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -168,16 +168,16 @@ export const Empty = () => {
       <path
         d="M39.1663 41.125V37.2083C39.1663 35.1308 38.341 33.1384 36.872 31.6693C35.403 30.2003 33.4105 29.375 31.333 29.375H15.6663C13.5888 29.375 11.5964 30.2003 10.1273 31.6693C8.6583 33.1384 7.83301 35.1308 7.83301 37.2083V41.125"
         stroke="#C4C4C4"
-        stroke-width="4"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M23.5003 21.5417C27.8266 21.5417 31.3337 18.0346 31.3337 13.7083C31.3337 9.3821 27.8266 5.875 23.5003 5.875C19.1741 5.875 15.667 9.3821 15.667 13.7083C15.667 18.0346 19.1741 21.5417 23.5003 21.5417Z"
         stroke="#C4C4C4"
-        stroke-width="4"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
