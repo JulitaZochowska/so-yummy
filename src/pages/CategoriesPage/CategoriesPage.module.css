@@ -5,16 +5,18 @@
     height: 100vh;
     justify-content: left;
     margin-left: 100px;
+    position: relative;
   }
   .CategoriesPage_h1 {
     color: #001833;
-font-feature-settings: 'liga' off;
-font-family: Poppins;
-font-size: 44px;
-font-style: normal;
-font-weight: 600;
-line-height: 44px; /* 100% */
-letter-spacing: -0.88px;
+    font-feature-settings: 'liga' off;
+    font-family: Poppins;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 44px; /* 100% */
+    letter-spacing: -0.88px;
+    margin: 0;
   }
   .CategoriesPage_nav {
     margin-top: 100px;
@@ -56,7 +58,33 @@ letter-spacing: -0.88px;
     opacity: 1; /* Make the border visible on hover */
   }
   
-
+  .spinachImage {
+    width: 558px;
+    height: 852px;
+    top: 788.96px;
+    position: absolute; /* Position the image absolutely within the container */
+  }
+  .rectangle11 {
+    width: 14px;
+    height: 14px;
+    top: 38px;
+    left: 228px;
+    position: absolute;
+  }
+  .rectangle8 {
+    width: 14px;
+    height: 14px;
+    top: 100px;
+    left: 707px;
+    position: absolute;
+  }
+  .rectangle9 {
+    width: 14px;
+    height: 14px;
+    top: 50px;
+    left: 1150px;
+    position: absolute;
+  }
   .container {
     width: 100%;
     display: flex;
@@ -72,7 +100,7 @@ letter-spacing: -0.88px;
   }
   @media screen and (min-width: 1280px) {
     .CategoriesPage {
-      padding: 115px 0 123px 0;
+      padding: 84px 0 123px 0;
       min-height: 770px;
     }
     .container {
