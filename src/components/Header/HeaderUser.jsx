@@ -9,9 +9,9 @@ import { HeaderUserModal } from './HeaderUserModal';
 import { HeaderEditModal } from './HeaderEditModal';
 import { HeaderLogoutModal } from './HeaderLogoutModal';
 export const HeaderUser = () => {
-  const [showUserModal, setShowUserModal] = useState(false);
-  const [showEditModal, setShowEditModal] = useState(false);
-  const [showLogoutModal, setShowLogoutModal] = useState(false);
+  const [showUserModal, notShowUserModal] = useState(false);
+  const [showEditModal, notShowEditModal] = useState(false);
+  const [showLogoutModal, notShowLogoutModal] = useState(false);
 
   const openUserModal = e => {
     togleUserModal();
@@ -26,15 +26,15 @@ export const HeaderUser = () => {
   };
 
   const togleUserModal = useCallback(() => {
-    setShowUserModal(!showUserModal);
+    notShowUserModal(!showUserModal);
   }, [showUserModal]);
 
   const togleEditModal = useCallback(() => {
-    setShowEditModal(!showEditModal);
+    notShowEditModal(!showEditModal);
   }, [showEditModal]);
 
   const togleLogoutModal = useCallback(() => {
-    setShowLogoutModal(!showLogoutModal);
+    notShowLogoutModal(!showLogoutModal);
   }, [showLogoutModal]);
 
   return (
