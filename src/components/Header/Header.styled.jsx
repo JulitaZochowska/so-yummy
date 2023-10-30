@@ -101,6 +101,10 @@ export const HeaderStyledNavLink = styled(NavLink)`
   svg {
     width: 16px;
     height: 16px;
+    stroke: #22252a;
+  }
+  svg:hover {
+    stroke: #8baa36;
   }
   @media (max-width: 830px) {
     margin-right: 9px;

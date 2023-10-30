@@ -66,15 +66,35 @@ export const HeaderUserModalEditButton = styled.button`
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     color: #8baa36;
+    svg {
+      stroke: #8baa36;
+    }
   }
   svg {
     margin-left: 37px;
     width: 14px;
     height: 14px;
+    stroke: #23262a;
     @media (min-width: 478px) {
       margin-left: 53px;
     }
   }
+  @media (min-width: 478px) {
+    margin-bottom: 32px;
+  }
+  svg:hover {
+    stroke: #8baa36;
+  }
+`;
+
+export const Pen = styled.svg`
+  margin-left: 0px;
+  width: 14px;
+  height: 14px;
+  @media (min-width: 478px) {
+    margin-left: 53px;
+  }
+
   @media (min-width: 478px) {
     margin-bottom: 32px;
   }
@@ -100,6 +120,7 @@ export const HeaderUserModalLogoutButton = styled.button`
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     color: #d3d3d3;
+    background-color: rgba(34, 37, 42, 1);
   }
   svg {
     margin-left: 4px;
@@ -204,6 +225,7 @@ export const HeaderLogoutModalLogoutButtonStyled = styled.button`
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     color: #d3d3d3;
+    background-color: rgba(30, 31, 40, 1);
   }
   @media (min-width: 478px) {
     width: 192px;
@@ -233,7 +255,8 @@ export const HeaderLogoutModalCancelButtonStyled = styled.button`
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
-    color: #8baa36;
+    color: rgba(35, 38, 42, 1);
+    background-color: white;
   }
   @media (min-width: 478px) {
     width: 192px;
@@ -295,6 +318,10 @@ export const HeaderEditModalCloseButtonStyled = styled.button`
 `;
 
 export const HeaderEditModalStyledImgContainer = styled.div`
+  height: 103px;
+  width: 103px;
+  background-color: rgba(217, 217, 217, 1);
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -304,8 +331,8 @@ export const HeaderEditModalStyledImgContainer = styled.div`
     margin-bottom: 52px;
   }
   svg {
-    width: 103px;
-    height: 103px;
+    width: 47px;
+    height: 47px;
     fill: #d9d9d9;
   }
 `;
@@ -352,6 +379,7 @@ export const HeaderEditModalNameLabel = styled.label`
     top: 15px;
     left: 15px;
     right: 0px;
+    stroke: black;
     @media (min-width: 478px) {
       width: 24px;
       height: 24px;
@@ -372,6 +400,9 @@ export const HeaderEditModalNameLabel = styled.label`
         width: 18px;
         height: 18px;
       }
+    }
+    svg:hover {
+      stroke: #8baa36;
     }
   }
 `;
@@ -429,6 +460,7 @@ export const HeaderEditModalSubmitButton = styled.button`
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     color: #d3d3d3;
+    background-color: rgba(34, 37, 42, 1);
   }
   width: 282px;
   @media (min-width: 478px) {
