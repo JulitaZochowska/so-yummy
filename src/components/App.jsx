@@ -1,15 +1,13 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-import { Layout } from 'layout/Layout';
 import WelcomePage from 'pages/WelcomePage/WelcomePage';
 import RegisterPage from 'pages/RegisterPage/RegisterPage';
 import SigninPage from 'pages/SigninPage/SigninPage';
-import { Layout } from 'pages/Layout/Layout';
 import MainPage from 'pages/MainPage/MainPage';
 import { selectLoggedIn } from 'redux/selectors/users.selectors';
 import { refreshUser } from 'redux/actions/users.actions';
-
+import { Layout } from 'pages/Layout/Layout';
 
 const unathorisedRoute = (
   <Route path="/">
@@ -33,11 +31,9 @@ export const App = () => {
     dispatch(refreshUser());
   }, [dispatch]);
   return (
-
     <div>
       <Routes>{isLogged ? authorisedRoute : unathorisedRoute}</Routes>
     </div>
-
   );
 };
 
