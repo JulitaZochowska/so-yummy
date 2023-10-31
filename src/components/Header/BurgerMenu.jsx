@@ -1,11 +1,6 @@
 import { fallDown as Menu } from 'react-burger-menu';
-import {
-  BurgerMenuStyles,
-  BurgerMenuContainer,
-  BurgerMenuLogoLink,
-  BurgerMenuStyledNavLink,
-  BurgerMenuBackgroundContainer,
-} from './BurgerMenu.styled';
+import { BurgerMenuStyles } from './BurgerMenu.styled';
+import css from './Header.module.css';
 import { useState } from 'react';
 import {
   BurgerIcon,
@@ -13,6 +8,7 @@ import {
   CrossIcon,
   MagnifyingGlass,
 } from './HeaderIcons';
+import { Link } from 'react-router-dom';
 
 export const BurgerMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,7 +22,7 @@ export const BurgerMenu = () => {
   };
 
   return (
-    <BurgerMenuContainer>
+    <div className={css.BurgerMenuContainer}>
       <Menu
         customBurgerIcon={<BurgerIcon />}
         customCrossIcon={<CrossIcon />}
@@ -34,34 +30,60 @@ export const BurgerMenu = () => {
         isOpen={menuOpen}
         onStateChange={state => handleStateChange(state)}
         styles={BurgerMenuStyles}
+        className={css.BurgerMenuStyles}
       >
-        <BurgerMenuLogoLink onClick={() => closeMenu()} to={'/'}>
+        <Link
+          className={css.BurgerMenuLogoLink}
+          onClick={() => closeMenu()}
+          to={'/'}
+        >
           <HeaderLogo />
-        </BurgerMenuLogoLink>
-        <BurgerMenuStyledNavLink onClick={() => closeMenu()} to={'categories'}>
+        </Link>
+        <Link
+          className={css.BurgerMenuStyledNavLink}
+          onClick={() => closeMenu()}
+          to={'categories'}
+        >
           Categories
-        </BurgerMenuStyledNavLink>
-        <BurgerMenuStyledNavLink onClick={() => closeMenu()} to={'add'}>
+        </Link>
+        <Link
+          className={css.BurgerMenuStyledNavLink}
+          onClick={() => closeMenu()}
+          to={'add'}
+        >
           Add recipes
-        </BurgerMenuStyledNavLink>
-        <BurgerMenuStyledNavLink onClick={() => closeMenu()} to={'my'}>
+        </Link>
+        <Link
+          className={css.BurgerMenuStyledNavLink}
+          onClick={() => closeMenu()}
+          to={'my'}
+        >
           My recipes
-        </BurgerMenuStyledNavLink>
-        <BurgerMenuStyledNavLink onClick={() => closeMenu()} to={'favorite'}>
+        </Link>
+        <Link
+          className={css.BurgerMenuStyledNavLink}
+          onClick={() => closeMenu()}
+          to={'favorite'}
+        >
           Favorites
-        </BurgerMenuStyledNavLink>
-        <BurgerMenuStyledNavLink
+        </Link>
+        <Link
+          className={css.BurgerMenuStyledNavLink}
           onClick={() => closeMenu()}
           to={'shopping-list'}
         >
           Shopping list
-        </BurgerMenuStyledNavLink>
-        <BurgerMenuStyledNavLink onClick={() => closeMenu()} to={'search'}>
+        </Link>
+        <Link
+          className={css.BurgerMenuStyledNavLink}
+          onClick={() => closeMenu()}
+          to={'search'}
+        >
           <MagnifyingGlass />
           Search
-        </BurgerMenuStyledNavLink>
-        <BurgerMenuBackgroundContainer />
+        </Link>
+        <div className={css.BurgerMenuBackgroundContainer}></div>
       </Menu>
-    </BurgerMenuContainer>
+    </div>
   );
 };

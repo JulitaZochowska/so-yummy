@@ -1,21 +1,11 @@
-import {
-  HeaderEditModalOverlayStyled,
-  HeaderEditModalBodyStyled,
-  HeaderEditModalContainerStyled,
-  HeaderEditModalCloseButtonStyled,
-  HeaderEditModalStyledImg,
-  HeaderEditModalStyledImgContainer,
-  HeaderEditModalForm,
-  HeaderEditModalFileInput,
-  HeaderEditModalFileLabel,
-  HeaderEditModalNameLabel,
-  HeaderEditModalNameInput,
-  HeaderEditModalSubmitButton,
-} from './HeaderModals.styled';
+import css from './Header.module.css';
 import { useEffect, useState } from 'react';
-import { CrossIcon, Empty, Man, Pen } from './HeaderIcons';
 
-import { AddPhotoIcon } from './HeaderIcons';
+import CrossIcon from '../../images/Header/CrossIcon.svg';
+import Empty from '../../images/Header/Empty.svg';
+import AddPhotoIcon from '../../images/Header/AddPhotoIcon.svg';
+import Man from '../../images/Header/man.svg';
+import Pen from '../../images/Header/pen.svg';
 
 import { toast } from 'react-toastify';
 
@@ -64,43 +54,57 @@ export const HeaderEditModal = ({ onClose, avatar, user }) => {
 
   return (
     <>
-      <HeaderEditModalOverlayStyled>
-        <HeaderEditModalBodyStyled>
-          <HeaderEditModalContainerStyled>
-            <HeaderEditModalCloseButtonStyled
+      <div className={css.HeaderEditModalOverlayStyled}>
+        <div className={css.HeaderEditModalBodyStyled}>
+          <div className={css.HeaderEditModalContainerStyled}>
+            <button
+              className={css.HeaderEditModalCloseButtonStyled}
               onClick={() => {
                 onClose();
               }}
             >
-              <CrossIcon />
-            </HeaderEditModalCloseButtonStyled>
-            <HeaderEditModalStyledImgContainer>
-              {image ? <HeaderEditModalStyledImg src={image} /> : <Empty />}
-            </HeaderEditModalStyledImgContainer>
-            <HeaderEditModalForm onSubmit={handleOnSubmit}>
-              <HeaderEditModalFileLabel>
-                <HeaderEditModalFileInput
+              <img className={css.CrossIcon} src={CrossIcon} alt="CrossIcon" />
+            </button>
+            <div className={css.HeaderEditModalStyledImgContainer}>
+              {image ? (
+                <img className={css.HeaderEditModalStyledImg} src={image} />
+              ) : (
+                <img className={css.Empty} src={Empty} alt="CrossIcon" />
+              )}
+            </div>
+            <form className={css.HeaderEditModalForm} onSubmit={handleOnSubmit}>
+              <label className={css.HeaderEditModalForm}>
+                <input
                   type={'file'}
                   accept={'image/jpeg,image/png,image/gif'}
                   onChange={previewOnChangeImg}
+                  className={css.HeaderEditModalFileInput}
                 />
-                <AddPhotoIcon />
-              </HeaderEditModalFileLabel>
-              <HeaderEditModalNameLabel>
-                <HeaderEditModalNameInput
+
+                <img
+                  className={css.AddPhotoIcon}
+                  src={AddPhotoIcon}
+                  alt="CrossIcon"
+                />
+              </label>
+              <label className={css.HeaderEditModalNameLabel}>
+                <input
                   value={name}
                   onChange={nameOnChange}
+                  className={css.HeaderEditModalNameInput}
                 />
-                <Man />
-                <Pen />
-              </HeaderEditModalNameLabel>
-              <HeaderEditModalSubmitButton>
+                {/* <Man />
+                <Pen /> */}
+                <img className={css.Pen} src={Pen} alt="CrossIcon" />
+                <img className={css.Man} src={Man} alt="CrossIcon" />
+              </label>
+              <button className={css.HeaderEditModalSubmitButton}>
                 Save changes
-              </HeaderEditModalSubmitButton>
-            </HeaderEditModalForm>
-          </HeaderEditModalContainerStyled>
-        </HeaderEditModalBodyStyled>
-      </HeaderEditModalOverlayStyled>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

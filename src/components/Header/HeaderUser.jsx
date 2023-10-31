@@ -1,9 +1,6 @@
 import { useState, useCallback } from 'react';
-import {
-  HeaderStyledUser,
-  HeaderStyledUserText,
-  HeaderStyledUserAvatarConteiner,
-} from './Header.styled';
+
+import css from './Header.module.css';
 
 import { HeaderUserModal } from './HeaderUserModal';
 import { HeaderEditModal } from './HeaderEditModal';
@@ -39,11 +36,11 @@ export const HeaderUser = () => {
 
   return (
     <>
-      <HeaderStyledUser onClick={openUserModal}>
-        <HeaderStyledUserAvatarConteiner></HeaderStyledUserAvatarConteiner>
+      <div className={css.HeaderStyledUser} onClick={openUserModal}>
+        <div className={css.HeaderStyledUserAvatarConteiner}></div>
 
-        <HeaderStyledUserText>Name</HeaderStyledUserText>
-      </HeaderStyledUser>
+        <div className={css.HeaderStyledUserText}>Name</div>
+      </div>
       {showUserModal && (
         <HeaderUserModal
           onClose={togleUserModal}

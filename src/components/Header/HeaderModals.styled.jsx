@@ -300,23 +300,6 @@ export const HeaderEditModalContainerStyled = styled.div`
   }
 `;
 
-export const HeaderEditModalCloseButtonStyled = styled.button`
-  border: none;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  cursor: pointer;
-  background-color: transparent;
-  @media (min-width: 478px) {
-    width: 14px;
-    height: 14px;
-    top: 24px;
-    right: 24px;
-  }
-`;
-
 export const HeaderEditModalStyledImgContainer = styled.div`
   height: 103px;
   width: 103px;
