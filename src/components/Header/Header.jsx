@@ -1,10 +1,9 @@
-import { HeaderStyledNavLink } from './Header.styled';
-import { HeaderLogo, MagnifyingGlass } from './HeaderIcons';
+import { HeaderLogo } from './HeaderIcons';
 import { BurgerMenu } from './BurgerMenu';
 import { HeaderUser } from './HeaderUser';
 import css from './Header.module.css';
 import { Link } from 'react-router-dom';
-
+import { ReactComponent as MagnifyingGlass } from '../../images/Header/MagnifyingGlass.svg';
 export const Header = () => {
   return (
     <>
@@ -28,9 +27,11 @@ export const Header = () => {
           <Link className={css.HeaderStyledNavLink} to={'shopping-list'}>
             Shopping list
           </Link>
-          <HeaderStyledNavLink to={'search'}>
-            <MagnifyingGlass />
-          </HeaderStyledNavLink>
+
+          <MagnifyingGlass
+            title="MagnifyingGlass"
+            className={css.MagnifyingGlass}
+          />
         </div>
 
         <HeaderUser />

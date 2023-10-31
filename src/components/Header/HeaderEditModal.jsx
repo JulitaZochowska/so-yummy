@@ -1,12 +1,11 @@
 import css from './Header.module.css';
 import { useEffect, useState } from 'react';
+import { ReactComponent as CrossIcon } from '../../images/Header/CrossIcon.svg';
+import { ReactComponent as Empty } from '../../images/Header/Empty.svg';
+import { ReactComponent as AddPhotoIcon } from '../../images/Header/AddPhotoIcon.svg';
+import { ReactComponent as Man } from '../../images/Header/man.svg';
 
-import CrossIcon from '../../images/Header/CrossIcon.svg';
-import Empty from '../../images/Header/Empty.svg';
-import AddPhotoIcon from '../../images/Header/AddPhotoIcon.svg';
-import Man from '../../images/Header/man.svg';
-import Pen from '../../images/Header/pen.svg';
-
+import { ReactComponent as Pen } from '../../images/Header/pen.svg';
 import { toast } from 'react-toastify';
 
 export const HeaderEditModal = ({ onClose, avatar, user }) => {
@@ -63,7 +62,7 @@ export const HeaderEditModal = ({ onClose, avatar, user }) => {
                 onClose();
               }}
             >
-              <img className={css.CrossIcon} src={CrossIcon} alt="CrossIcon" />
+              <CrossIcon className={css.CrossIcon} />
             </button>
             <div className={css.HeaderEditModalStyledImgContainer}>
               {image ? (
@@ -73,7 +72,7 @@ export const HeaderEditModal = ({ onClose, avatar, user }) => {
                   alt="CrossIcon"
                 />
               ) : (
-                <img className={css.Empty} src={Empty} alt="CrossIcon" />
+                <Empty className={css.Empty} />
               )}
             </div>
             <form className={css.HeaderEditModalForm} onSubmit={handleOnSubmit}>
@@ -85,11 +84,7 @@ export const HeaderEditModal = ({ onClose, avatar, user }) => {
                   className={css.HeaderEditModalFileInput}
                 />
 
-                <img
-                  className={css.AddPhotoIcon}
-                  src={AddPhotoIcon}
-                  alt="CrossIcon"
-                />
+                <AddPhotoIcon className={css.AddPhotoIcon} />
               </label>
               <label className={css.HeaderEditModalNameLabel}>
                 <input
@@ -97,10 +92,9 @@ export const HeaderEditModal = ({ onClose, avatar, user }) => {
                   onChange={nameOnChange}
                   className={css.HeaderEditModalNameInput}
                 />
-                {/* <Man />
-                <Pen /> */}
-                <img className={css.Pen} src={Pen} alt="CrossIcon" />
-                <img className={css.Man} src={Man} alt="CrossIcon" />
+
+                <Pen className={css.Pen} />
+                <Man className={css.Man} />
               </label>
               <button className={css.HeaderEditModalSubmitButton}>
                 Save changes

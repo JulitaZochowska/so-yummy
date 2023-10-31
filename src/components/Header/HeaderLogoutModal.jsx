@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import css from './Header.module.css';
-import CrossIcon from '../../images/Header/CrossIcon.svg';
+
+import { ReactComponent as CrossIcon } from '../../images/Header/CrossIcon.svg';
 
 export const HeaderLogoutModal = ({ onClose }) => {
   useEffect(() => {
@@ -33,7 +34,7 @@ export const HeaderLogoutModal = ({ onClose }) => {
               onClose();
             }}
           >
-            <img src={CrossIcon} className={css.CrossIcon} alt="CrossIcon" />
+            <CrossIcon className={css.CrossIcon} />
           </button>
           <p className={css.HeaderLogoutModalTextStyled}>
             Are you sure you want to log out?

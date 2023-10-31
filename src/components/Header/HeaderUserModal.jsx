@@ -1,9 +1,6 @@
-import {
-  HeaderUserModalEditButton,
-  HeaderUserModalLogoutButton,
-} from './Header.styled';
 import { useEffect } from 'react';
-import { ArrowRight, Pen } from './HeaderIcons';
+import { ReactComponent as ArrowRight } from '../../images/Header/ArrowRight.svg';
+import { ReactComponent as Pen } from '../../images/Header/pen.svg';
 import css from './Header.module.css';
 
 export const HeaderUserModal = ({ onClose, editOpen, logOutOpen }) => {
@@ -36,16 +33,18 @@ export const HeaderUserModal = ({ onClose, editOpen, logOutOpen }) => {
       >
         <div className={css.HeaderUserModalBodyStyled}>
           <div className={css.HeaderUserModalContainerStyled}>
-            <HeaderUserModalEditButton
+            <button
+              className={css.HeaderUserModalEditButton}
               onClick={() => {
                 onClose();
                 editOpen();
               }}
             >
               Edit profile
-              <Pen />
-            </HeaderUserModalEditButton>
-            <HeaderUserModalLogoutButton
+              <Pen className={css.HeaderUserModalPen} />
+            </button>
+            <button
+              className={css.HeaderUserModalLogoutButton}
               onClick={() => {
                 onClose();
                 logOutOpen();
@@ -53,7 +52,7 @@ export const HeaderUserModal = ({ onClose, editOpen, logOutOpen }) => {
             >
               Log-out
               <ArrowRight />
-            </HeaderUserModalLogoutButton>
+            </button>
           </div>
         </div>
       </div>

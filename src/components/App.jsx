@@ -8,12 +8,14 @@ import MainPage from 'pages/MainPage/MainPage';
 import { selectLoggedIn } from 'redux/selectors/users.selectors';
 import { refreshUser } from 'redux/actions/users.actions';
 import { Layout } from 'pages/Layout/Layout';
+import { Header } from './Header/Header';
 
 const unathorisedRoute = (
   <Route path="/">
     <Route index element={<WelcomePage />}></Route>
     <Route path="/register" element={<RegisterPage />}></Route>
     <Route path="/signin" element={<SigninPage />}></Route>
+    <Route path="/header" element={<Header />}></Route>
   </Route>
 );
 

@@ -9,7 +9,7 @@
   right: 0;
   left: 0;
   max-width: 1440px;
-  margin-left: auto;
+  /* margin-left: auto; */
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -176,46 +176,7 @@
     height: 44px;
   }
 }
-.BurgerMenuStyledNavLink {
-  position: relative;
-  z-index: 1;
-  font-family: 'Poppins';
-  text-decoration: none;
-  margin-bottom: 32px;
-  line-height: 1.6;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 18px;
-  letter-spacing: -0.02em;
-  color: #22252a;
-  transition-property: color;
-  transition-duration: 500ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    color: #8baa36;
-  }
-  @media (min-width: 478px) {
-    font-size: 24px;
-    line-height: 24px;
-    margin-bottom: 40px;
-  }
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-  &.active {
-    color: #8baa36;
-  }
-  svg {
-    width: 18px;
-    height: 18px;
-    margin-right: 8px;
-    @media (min-width: 478px) {
-      width: 21px;
-      height: 21px;
-    }
-  }
-}
+
 .BurgerMenuBackgroundContainer {
   background-image: url('../../images/Header/burgermenubackground320.png');
   background-repeat: no-repeat;
@@ -298,11 +259,7 @@
     right: 24px;
   }
 }
-.CrossIcon {
-  width: 20px;
-  height: 20px;
-  fill: #d9d9d9;
-}
+
 .Empty {
   width: 47px;
   height: 47px;
@@ -386,6 +343,7 @@
     line-height: 27px;
   }
 }
+
 .Pen {
   position: absolute;
   width: 17px;
@@ -393,7 +351,6 @@
   left: 251px;
   top: 15px;
   stroke: #23262a;
-  fill: #22252a;
   stroke-width: 1;
   stop-color: #22252a;
   @media (min-width: 478px) {
@@ -639,5 +596,145 @@
   }
 }
 .HeaderUserModalContainerStyled {
+  display: flex;
+  flex-direction: column;
   padding: 18px;
+  align-items: center;
+}
+.HeaderUserModalContainerStyled:hover {
+  color: #8baa36;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.MagnifyingGlass {
+  color: rgba(30, 31, 40, 1);
+  height: 24px;
+  width: 24px;
+}
+.MagnifyingGlass:hover {
+  color: #8baa36;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.HeaderUserModalPen {
+  margin-left: 37px;
+  width: 14px;
+  height: 14px;
+  stroke: #23262a;
+  @media (min-width: 478px) {
+    margin-left: 53px;
+  }
+  color: rgba(30, 31, 40, 1);
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.HeaderUserModalPen:hover {
+  color: #8baa36;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.HeaderUserModalEditButton {
+  font-family: 'Poppins';
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #23262a;
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (min-width: 478px) {
+    margin-bottom: 32px;
+  }
+}
+.HeaderUserModalEditButton:hover {
+  color: #8baa36;
+}
+.HeaderUserModalLogoutButton {
+  font-family: 'Poppins';
+  border: none;
+  background-color: #8baa36;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  border-radius: 24px 44px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 12px 24px;
+  width: 125px;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (min-width: 478px) {
+    width: 141px;
+    padding: 12px 32px;
+  }
+}
+.HeaderUserModalLogoutButton:hover {
+  color: #d3d3d3;
+  background-color: rgba(34, 37, 42, 1);
+}
+.CrossIcon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 24px;
+  height: 24px;
+}
+.BurgerMenuBurgerIcon {
+  background-color: #8baa36;
+}
+.BurgerMenuMagnifyingGlass {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  @media (min-width: 478px) {
+    width: 21px;
+    height: 21px;
+  }
+}
+
+.BurgerMenuMagnifyingGlass:hover {
+  color: #8baa36;
+}
+.BurgerMenuStyledNavLink {
+  position: relative;
+  z-index: 1;
+  font-family: 'Poppins';
+  text-decoration: none;
+  margin-bottom: 32px;
+  line-height: 1.6;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  color: #22252a;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (min-width: 478px) {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 40px;
+  }
+}
+
+.BurgerMenuStyledNavLink:last-of-type {
+  margin-bottom: 0;
 }
