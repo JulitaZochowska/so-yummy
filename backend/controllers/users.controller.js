@@ -102,8 +102,89 @@ const accountVerifyHandler = async (req, res, next) => {
   }
 };
 
+const logOutHandler = async (req, res, next) => {
+  try {
+    await updateUser(req.user._id, { token: null });
+
+    return res.status(204).json({
+      status: 'OK',
+      code: 204,
+    });
+  } catch (error) {
+    return next(error);
+  }
+};
+
+const currentUserHandler = async (req, res, next) => {
+  try {
+    const {
+      name,
+      email,
+      newsletter,
+      token,
+      avatar,
+      verified,
+      createdAt,
+      updatedAt,
+    } = await getUser({ email: req.body.email });
+    if (token === null) {
+      return res.status(401).json({
+        status: 'error',
+        code: 401,
+        message: 'Unauthorized',
+      });
+    }
+    return res.status(200).json({
+      status: 'OK',
+      code: 200,
+      user: {
+        name: name,
+        email: email,
+        newsletter: newsletter,
+        token: token,
+        avatar: avatar,
+        verified: verified,
+        created: createdAt,
+        updated: updatedAt,
+      },
+    });
+  } catch (error) {
+    console.error(error);
+    return next(error);
+  }
+};
+
+const updateUserNameHandler = async (req, res, next) => {
+  try {
+    const { name } = req.body;
+    const updatedUser = await updateUser(req.user._id, { name });
+
+    if (!updatedUser) {
+      return res.status(404).json({
+        status: 'fail',
+        code: 404,
+        message: 'User not found',
+      });
+    }
+
+    res.status(200).json({
+      status: 'success',
+      code: 200,
+      data: {
+        updatedUser,
+      },
+    });
+  } catch (error) {
+    console.error(error);
+    return next(error);
+  }
+};
+
 module.exports = {
   registerHandler,
   signInHandler,
   accountVerifyHandler,
+  logOutHandler,
+  currentUserHandler,
+  updateUserNameHandler,
 };
