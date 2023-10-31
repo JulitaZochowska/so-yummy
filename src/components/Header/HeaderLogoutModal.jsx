@@ -1,15 +1,6 @@
-import {
-  HeaderLogoutModalOverlayStyled,
-  HeaderLogoutModalBodyStyled,
-  HeaderLogoutModalContainerStyled,
-  HeaderLogoutModalTextStyled,
-  HeaderLogoutModalCloseButtonStyled,
-  HeaderLogoutModalButtonsContainerStyled,
-  HeaderLogoutModalLogoutButtonStyled,
-  HeaderLogoutModalCancelButtonStyled,
-} from './HeaderModals.styled';
-import { CrossIcon } from './HeaderIcons';
 import { useEffect } from 'react';
+import css from './Header.module.css';
+import CrossIcon from '../../images/Header/CrossIcon.svg';
 
 export const HeaderLogoutModal = ({ onClose }) => {
   useEffect(() => {
@@ -30,33 +21,38 @@ export const HeaderLogoutModal = ({ onClose }) => {
     }
   };
   return (
-    <HeaderLogoutModalOverlayStyled onClick={handleOverlayClick}>
-      <HeaderLogoutModalBodyStyled>
-        <HeaderLogoutModalContainerStyled>
-          <HeaderLogoutModalCloseButtonStyled
+    <div
+      className={css.HeaderLogoutModalOverlayStyled}
+      onClick={handleOverlayClick}
+    >
+      <div className={css.HeaderLogoutModalBodyStyled}>
+        <div className={css.HeaderLogoutModalContainerStyled}>
+          <button
+            className={css.HeaderLogoutModalCloseButtonStyled}
             onClick={() => {
               onClose();
             }}
           >
-            <CrossIcon />
-          </HeaderLogoutModalCloseButtonStyled>
-          <HeaderLogoutModalTextStyled>
+            <img src={CrossIcon} className={css.CrossIcon} alt="CrossIcon" />
+          </button>
+          <p className={css.HeaderLogoutModalTextStyled}>
             Are you sure you want to log out?
-          </HeaderLogoutModalTextStyled>
-          <HeaderLogoutModalButtonsContainerStyled>
-            <HeaderLogoutModalLogoutButtonStyled>
+          </p>
+          <div className={css.HeaderLogoutModalButtonsContainerStyled}>
+            <button className={css.HeaderLogoutModalLogoutButtonStyled}>
               Log out
-            </HeaderLogoutModalLogoutButtonStyled>
-            <HeaderLogoutModalCancelButtonStyled
+            </button>
+            <button
+              className={css.HeaderLogoutModalCancelButtonStyled}
               onClick={() => {
                 onClose();
               }}
             >
               Cancel
-            </HeaderLogoutModalCancelButtonStyled>
-          </HeaderLogoutModalButtonsContainerStyled>
-        </HeaderLogoutModalContainerStyled>
-      </HeaderLogoutModalBodyStyled>
-    </HeaderLogoutModalOverlayStyled>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };

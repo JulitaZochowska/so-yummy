@@ -1,13 +1,10 @@
 import {
-  HeaderUserModalOverlayStyled,
-  HeaderUserModalBodyStyled,
-  HeaderUserModalContainerStyled,
   HeaderUserModalEditButton,
   HeaderUserModalLogoutButton,
-  HeaderUserModalContainer,
 } from './HeaderModals.styled';
 import { useEffect } from 'react';
 import { ArrowRight, Pen } from './HeaderIcons';
+import css from './Header.module.css';
 
 export const HeaderUserModal = ({ onClose, editOpen, logOutOpen }) => {
   useEffect(() => {
@@ -29,10 +26,16 @@ export const HeaderUserModal = ({ onClose, editOpen, logOutOpen }) => {
   };
 
   return (
-    <HeaderUserModalOverlayStyled onClick={handleOverlayClick}>
-      <HeaderUserModalContainer onClick={handleOverlayClick}>
-        <HeaderUserModalBodyStyled>
-          <HeaderUserModalContainerStyled>
+    <div
+      className={css.HeaderUserModalOverlayStyled}
+      onClick={handleOverlayClick}
+    >
+      <div
+        className={css.HeaderUserModalContainer}
+        onClick={handleOverlayClick}
+      >
+        <div className={css.HeaderUserModalBodyStyled}>
+          <div className={css.HeaderUserModalContainerStyled}>
             <HeaderUserModalEditButton
               onClick={() => {
                 onClose();
@@ -51,9 +54,9 @@ export const HeaderUserModal = ({ onClose, editOpen, logOutOpen }) => {
               Log-out
               <ArrowRight />
             </HeaderUserModalLogoutButton>
-          </HeaderUserModalContainerStyled>
-        </HeaderUserModalBodyStyled>
-      </HeaderUserModalContainer>
-    </HeaderUserModalOverlayStyled>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };

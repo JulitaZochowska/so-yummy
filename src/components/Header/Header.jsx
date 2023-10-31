@@ -1,3 +1,4 @@
+import { HeaderStyledNavLink } from './Header.styled';
 import { HeaderLogo, MagnifyingGlass } from './HeaderIcons';
 import { BurgerMenu } from './BurgerMenu';
 import { HeaderUser } from './HeaderUser';
@@ -27,9 +28,9 @@ export const Header = () => {
           <Link className={css.HeaderStyledNavLink} to={'shopping-list'}>
             Shopping list
           </Link>
-          <Link className={css.HeaderStyledNavLink} to={'search'}>
+          <HeaderStyledNavLink to={'search'}>
             <MagnifyingGlass />
-          </Link>
+          </HeaderStyledNavLink>
         </div>
 
         <HeaderUser />

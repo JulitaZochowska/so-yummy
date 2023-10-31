@@ -67,7 +67,11 @@ export const HeaderEditModal = ({ onClose, avatar, user }) => {
             </button>
             <div className={css.HeaderEditModalStyledImgContainer}>
               {image ? (
-                <img className={css.HeaderEditModalStyledImg} src={image} />
+                <img
+                  className={css.HeaderEditModalStyledImg}
+                  src={image}
+                  alt="CrossIcon"
+                />
               ) : (
                 <img className={css.Empty} src={Empty} alt="CrossIcon" />
               )}
