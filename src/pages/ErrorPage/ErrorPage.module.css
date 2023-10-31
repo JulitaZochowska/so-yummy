@@ -1,0 +1,123 @@
+.errorPage {
+  padding: 0 16px 0 16px;
+  background-image: url(../../images/leaves-bottom-mobile.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: 240px;
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .errorPage {
+    background-image: url(../../images/leaves-bottom-mobile@2x.png);
+  }
+}
+@media (min-device-pixel-ratio: 3),
+  (min-resolution: 268dpi),
+  (min-resolution: 3dppx) {
+  .errorPage {
+    background-image: url(../../images/leaves-bottom-mobile@3x.png);
+  }
+}
+.image {
+  width: 259px;
+  height: 170px;
+}
+.container {
+  width: 100%;
+  position: relative;
+}
+.imageBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.notice {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.11;
+  letter-spacing: -0.36px;
+  margin-top: 14px;
+  margin-bottom: 8px;
+}
+.description {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.28;
+  letter-spacing: -0.28px;
+  margin: 0;
+  opacity: 0.5;
+  max-width: 206px;
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 768px) {
+  .errorPage {
+    padding: 0 16px 0 16px;
+    background-image: url(../../images/leaves-bottom-tablet.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 350px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .errorPage {
+      background-image: url(../../images/leaves-bottom-tablet@2x.png);
+    }
+  }
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 268dpi),
+    (min-resolution: 3dppx) {
+    .errorPage {
+      background-image: url(../../images/leaves-bottom-tablet@3x.png);
+    }
+  }
+  .image {
+    width: 498px;
+    height: 327px;
+  }
+  .notice {
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: -0.48px;
+    margin-top: 32px;
+    margin-bottom: 14px;
+  }
+  .description {
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.36px;
+    max-width: none;
+    margin-bottom: 200px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .errorPage {
+    padding: 0 16px 0 16px;
+    background-image: url(../../images/leaves-bottom-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 365px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .errorPage {
+      background-image: url(../../images/leaves-bottom-desktop@2x.png);
+    }
+  }
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 268dpi),
+    (min-resolution: 3dppx) {
+    .errorPage {
+      background-image: url(../../images/leaves-bottom-desktop@3x.png);
+    }
+  }
+  .image {
+    width: 498px;
+    height: 331px;
+  }
+}
