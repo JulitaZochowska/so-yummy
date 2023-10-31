@@ -1,5 +1,5 @@
 import { fallDown as Menu } from 'react-burger-menu';
-import { BurgerMenuStyles } from './BurgerMenu.styled';
+import { BurgerMenuStyles } from './Header.styled';
 import css from './Header.module.css';
 import { useState } from 'react';
 import {

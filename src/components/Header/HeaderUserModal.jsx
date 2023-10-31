@@ -1,7 +1,7 @@
 import {
   HeaderUserModalEditButton,
   HeaderUserModalLogoutButton,
-} from './HeaderModals.styled';
+} from './Header.styled';
 import { useEffect } from 'react';
 import { ArrowRight, Pen } from './HeaderIcons';
 import css from './Header.module.css';
