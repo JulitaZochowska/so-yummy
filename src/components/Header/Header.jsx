@@ -1,3 +1,4 @@
+
 import { HeaderStyledNavLink } from './Header.styled';
 import { HeaderLogo, MagnifyingGlass } from './HeaderIcons';
 import { BurgerMenu } from './BurgerMenu';
@@ -39,4 +40,3 @@ export const Header = () => {
       <BurgerMenu />
     </>
   );
-};
