@@ -44,7 +44,7 @@
     height: 44px;
     margin: auto;
   }
-  @media (min-width: 920px) {
+  @media (min-width: 930px) {
     margin-left: 100px;
   }
 }
@@ -102,8 +102,8 @@
   @media (min-width: 768px) {
     margin-right: 0px;
   }
-  @media (max-width: 477px) {
-    margin-right: 52px;
+  @media (min-width: 940px) {
+    margin-right: 100px;
   }
 }
 .HeaderStyledUser:hover {
