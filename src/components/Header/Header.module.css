@@ -117,10 +117,15 @@
 }
 
 .HeaderStyledUserAvatarConteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 34px;
   width: 34px;
   border-radius: 50%;
   background-color: rgba(217, 217, 217, 1);
+  overflow: hidden;
+
   @media (min-width: 768px) {
     width: 44px;
     height: 44px;
