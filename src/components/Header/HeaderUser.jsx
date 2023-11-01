@@ -3,10 +3,16 @@ import css from './Header.module.css';
 import { HeaderUserModal } from './HeaderUserModal';
 import { HeaderEditModal } from './HeaderEditModal';
 import { HeaderLogoutModal } from './HeaderLogoutModal';
+import { getAvatar, getName } from 'redux/selectors/users.selectors';
+import { useSelector } from 'react-redux';
+
 export const HeaderUser = () => {
   const [showUserModal, notShowUserModal] = useState(false);
   const [showEditModal, notShowEditModal] = useState(false);
   const [showLogoutModal, notShowLogoutModal] = useState(false);
+
+  const userName = useSelector(getName);
+  const userAvatar = useSelector(getAvatar);
 
   const openUserModal = e => {
     togleUserModal();
@@ -35,9 +41,9 @@ export const HeaderUser = () => {
   return (
     <>
       <div className={css.HeaderStyledUser} onClick={openUserModal}>
-        <div className={css.HeaderStyledUserAvatarConteiner}></div>
+        <div className={css.HeaderStyledUserAvatarConteiner}>{userAvatar}</div>
 
-        <div className={css.HeaderStyledUserText}>Name</div>
+        <div className={css.HeaderStyledUserText}>{userName}</div>
       </div>
       {showUserModal && (
         <HeaderUserModal
