@@ -1,11 +1,6 @@
 const { User } = require('../models/users.model.js');
 const { nanoid } = require('nanoid');
-
-class UnknownDatabaseError extends Error {
-  constructor() {
-    super('Something went wrong at database layer.');
-  }
-}
+const { UnknownDatabaseError } = require('../db.js');
 
 const createUser = async data => {
   try {
@@ -25,7 +20,6 @@ const createUser = async data => {
 const getUser = async filter => {
   try {
     const user = await User.findOne(filter);
-    console.log(user);
     return user;
   } catch (error) {
     console.error(error);
