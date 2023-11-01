@@ -31,3 +31,6 @@ yarn-error.log*
 
 #secrets
 .env
+sass/
+public/
+.parcel-cache/
