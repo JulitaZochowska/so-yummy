@@ -31,3 +31,4 @@ yarn-error.log*
 
 #secrets
 .env
+.parcel-cache
