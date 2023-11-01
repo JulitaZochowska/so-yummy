@@ -93,7 +93,7 @@ export const HeaderEditModal = ({ onClose, avatar, user }) => {
                   className={css.HeaderEditModalNameInput}
                 />
 
-                <Pen className={css.Pen} />
+                <Pen className={css.HeaderEditModalPen} />
                 <Man className={css.Man} />
               </label>
               <button className={css.HeaderEditModalSubmitButton}>

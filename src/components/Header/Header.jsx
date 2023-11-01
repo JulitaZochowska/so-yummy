@@ -1,4 +1,4 @@
-import { HeaderLogo } from './HeaderIcons';
+import { ReactComponent as HeaderLogo } from '../../images/Header/HeaderLogo.svg';
 import { BurgerMenu } from './BurgerMenu';
 import { HeaderUser } from './HeaderUser';
 import css from './Header.module.css';
@@ -9,7 +9,7 @@ export const Header = () => {
     <>
       <div className={css.HeaderStyled}>
         <Link className={css.HeaderStyledLogoLink} to={'/'}>
-          <HeaderLogo />
+          <HeaderLogo className={css.HeaderStyledLogo} />
         </Link>
         <div className={css.HeaderStyledNav}>
           <Link to={'categories'} className={css.HeaderStyledNavLink}>

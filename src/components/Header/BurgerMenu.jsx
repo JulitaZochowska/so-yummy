@@ -1,11 +1,12 @@
 import { fallDown as Menu } from 'react-burger-menu';
 import css from './Header.module.css';
 import { useState } from 'react';
-import { BurgerIcon, CrossIcon } from './HeaderIcons';
+
+import { ReactComponent as BurgerIcon } from '../../images/Header/BurgerIcon.svg';
 import { ReactComponent as HeaderLogo } from '../../images/Header/HeaderLogo.svg';
 import { ReactComponent as MagnifyingGlass } from '../../images/Header/MagnifyingGlass.svg';
 import { Link } from 'react-router-dom';
-
+import { ReactComponent as CrossIcon } from '../../images/Header/CrossIcon.svg';
 export const BurgerMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -20,8 +21,8 @@ export const BurgerMenu = () => {
   return (
     <div className={css.BurgerMenuContainer}>
       <Menu
-        customBurgerIcon={<BurgerIcon />}
-        customCrossIcon={<CrossIcon />}
+        customBurgerIcon={<BurgerIcon className={css.BurgerIcon} />}
+        customCrossIcon={<CrossIcon className={css.BurgerMenuX} />}
         right
         isOpen={menuOpen}
         onStateChange={state => handleStateChange(state)}
@@ -32,7 +33,9 @@ export const BurgerMenu = () => {
           onClick={() => closeMenu()}
           to={'/'}
         >
-          <HeaderLogo />
+          <Link className={css.HeaderStyledLogoLink} to={'/'}>
+            <HeaderLogo className={css.HeaderStyledLogo} />
+          </Link>
         </Link>
         <Link
           className={css.BurgerMenuStyledNavLink}
@@ -91,17 +94,13 @@ const BurgerMenuStyles = {
     right: '33px',
     top: '32px',
   },
+
   bmBurgerBars: {
     background: '#22252A',
   },
   bmCrossButton: {
-    height: '14px',
-    width: '14px',
     top: '32px',
     right: '32px',
-  },
-  bmCross: {
-    background: '#22252A',
   },
   bmMenuWrap: {
     height: '100%',

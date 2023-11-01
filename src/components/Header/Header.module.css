@@ -14,24 +14,31 @@
   padding-left: 20px;
   padding-right: 20px;
 
-  @media (max-width: 375px) {
-    max-width: 343px;
-  }
   @media (max-width: 768px) {
     max-width: 704px;
   }
 }
+.HeaderStyledLogo {
+  width: 28px;
+  height: 28px;
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 .HeaderStyledLogoLink {
   width: 40px;
   height: 40px;
+  border-radius: 12px;
+  background-color: #8baa36;
   display: flex;
   align-items: center;
+  justify-content: center;
   transition-property: transform;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    transform: scale(1.06);
-  }
+
   @media (min-width: 768px) {
     width: 44px;
     height: 44px;
@@ -40,6 +47,9 @@
   @media (min-width: 920px) {
     margin: auto;
   }
+}
+.HeaderStyledLogoLink:hover {
+  transform: scale(1.06);
 }
 
 .HeaderStyledNav {
@@ -64,19 +74,20 @@
   transition-property: color;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    color: #8baa36;
-  }
-  &:last-child {
-    margin-right: 0;
-  }
-  &.active {
-    color: #8baa36;
-  }
 
   @media (max-width: 830px) {
     margin-right: 9px;
   }
+}
+.HeaderStyledNavLink:last-child {
+  margin-right: 0;
+}
+.HeaderStyledNavLink:hover {
+  color: #8baa36;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1.06);
 }
 .HeaderStyledUser {
   margin-right: 82px;
@@ -88,26 +99,23 @@
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover {
-    transform: scale(1.06);
-  }
   @media (min-width: 768px) {
     margin-right: 0px;
   }
   @media (max-width: 477px) {
     margin-right: 52px;
   }
-  svg {
-    width: 40px;
-    height: 40px;
-    margin-right: 14px;
-    fill: #9c9c9c;
-    @media (max-width: 477px) {
-      width: 34px;
-      height: 34px;
-    }
-  }
 }
+.HeaderStyledUser:hover {
+  transform: scale(1.06);
+}
+.HeaderStyledUser:hover .HeaderStyledUserText {
+  color: #8baa36;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .HeaderStyledUserAvatarConteiner {
   height: 34px;
   width: 34px;
@@ -120,10 +128,6 @@
   }
   @media (min-width: 920px) {
     margin: auto;
-  }
-  svg {
-    width: 44px;
-    height: 44px;
   }
 }
 .HeaderStyledUserImg {
@@ -157,6 +161,7 @@
     display: block;
   }
 }
+
 .BurgerMenuLogoLink {
   position: absolute;
   top: 18px;
@@ -168,15 +173,15 @@
   transition-property: transform;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    transform: scale(1.06);
-  }
+
   @media (min-width: 768px) {
     width: 44px;
     height: 44px;
   }
 }
-
+.BurgerMenuLogoLink:hover {
+  transform: scale(1.06);
+}
 .BurgerMenuBackgroundContainer {
   background-image: url('../../images/Header/burgermenubackground320.png');
   background-repeat: no-repeat;
@@ -331,9 +336,7 @@
   transition-property: border-color;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    border-color: #8baa36;
-  }
+
   @media (min-width: 478px) {
     width: 400px;
     height: 58px;
@@ -343,8 +346,11 @@
     line-height: 27px;
   }
 }
+.HeaderEditModalNameInput::selection {
+  border-color: #8baa36;
+}
 
-.Pen {
+.HeaderEditModalPen {
   position: absolute;
   width: 17px;
   height: 17px;
@@ -362,6 +368,7 @@
     height: 18px;
   }
 }
+
 .Pen:hover {
   stroke: #8baa36;
 }
@@ -417,18 +424,7 @@
   color: #d3d3d3;
   background-color: rgba(34, 37, 42, 1);
 }
-.MagnifyingGlass {
-  width: 16px;
-  height: 16px;
-  stroke: #22252a;
-  /* }
-      svg:hover {
-        stroke: #8baa36;
-      } */
-}
-.MagnifyingGlass:hover {
-  stroke: #8baa36;
-}
+
 .HeaderLogoutModalOverlayStyled {
   position: fixed;
   top: 0;
@@ -613,6 +609,8 @@
   width: 24px;
 }
 .MagnifyingGlass:hover {
+  cursor: pointer;
+  transform: scale(1.06);
   color: #8baa36;
   transition-property: color;
   transition-duration: 500ms;
@@ -660,6 +658,9 @@
 .HeaderUserModalEditButton:hover {
   color: #8baa36;
 }
+.HeaderUserModalEditButton:hover .HeaderUserModalPen {
+  color: #8baa36;
+}
 .HeaderUserModalLogoutButton {
   font-family: 'Poppins';
   border: none;
@@ -702,15 +703,13 @@
   width: 18px;
   height: 18px;
   margin-right: 8px;
+
   @media (min-width: 478px) {
     width: 21px;
     height: 21px;
   }
 }
 
-.BurgerMenuMagnifyingGlass:hover {
-  color: #8baa36;
-}
 .BurgerMenuStyledNavLink {
   position: relative;
   z-index: 1;
@@ -727,14 +726,30 @@
   transition-property: color;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
   @media (min-width: 478px) {
     font-size: 24px;
     line-height: 24px;
     margin-bottom: 40px;
   }
 }
-
-.BurgerMenuStyledNavLink:last-of-type {
+.BurgerMenuStyledNavLink:hover {
+  color: #8baa36;
+}
+.BurgerMenuStyledNavLink:last-of-type:hover .BurgerMenuMagnifyingGlass {
   margin-bottom: 0;
+  color: #8baa36;
+}
+
+.HeaderStyledLogoBurgerLink {
+  height: 44px;
+  width: 44px;
+  background-color: #8baa36;
+}
+.HeaderStyledLogoBurger {
+  height: 30px;
+  width: 30px;
+}
+.BurgerMenuX {
+  width: 40px;
+  height: 40px;
 }
