@@ -505,19 +505,20 @@
   padding: 14px 18px;
   width: 137px;
   margin-right: 8px;
-  transition-property: color;
+  transition-property: color, background-color;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    color: #d3d3d3;
-    background-color: rgba(30, 31, 40, 1);
-  }
+
   @media (min-width: 478px) {
     width: 192px;
     padding: 18px 39px;
     font-size: 16px;
     line-height: 18px;
   }
+}
+.HeaderLogoutModalLogoutButtonStyled:hover {
+  color: #d3d3d3;
+  background-color: rgba(30, 31, 40, 1);
 }
 .HeaderLogoutModalCancelButtonStyled {
   font-family: 'Poppins';
@@ -535,19 +536,20 @@
   line-height: 21px;
   padding: 14px 18px;
   width: 137px;
-  transition-property: color;
+  transition-property: color, background-color;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    color: rgba(35, 38, 42, 1);
-    background-color: white;
-  }
+
   @media (min-width: 478px) {
     width: 192px;
     padding: 18px 39px;
     font-size: 16px;
     line-height: 18px;
   }
+}
+.HeaderLogoutModalCancelButtonStyled:hover {
+  color: rgba(35, 38, 42, 1);
+  background-color: white;
 }
 .HeaderUserModalOverlayStyled {
   position: fixed;
@@ -676,7 +678,7 @@
   line-height: 21px;
   padding: 12px 24px;
   width: 125px;
-  transition-property: color;
+  transition-property: color, background-color;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -687,6 +689,7 @@
 }
 .HeaderUserModalLogoutButton:hover {
   color: #d3d3d3;
+
   background-color: rgba(34, 37, 42, 1);
 }
 .CrossIcon {
