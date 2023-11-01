@@ -5,8 +5,8 @@ import css from '../Loader/Loader.module.css';
 export const Loader = () => (
   <div className={css.BoxForLoader}>
     <ProgressBar
-      height="250px"
-      width="250px"
+      height="200px"
+      width="200px"
       ariaLabel="progress-bar-loading"
       wrapperStyle={{}}
       wrapperClass="progress-bar-wrapper"
