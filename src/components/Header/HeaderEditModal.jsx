@@ -1,17 +1,13 @@
 import css from './Header.module.css';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { ReactComponent as CrossIcon } from '../../images/Header/CrossIcon.svg';
 import { ReactComponent as Empty } from '../../images/Header/Empty.svg';
 import { ReactComponent as AddPhotoIcon } from '../../images/Header/AddPhotoIcon.svg';
 import { ReactComponent as Man } from '../../images/Header/man.svg';
 
 import { ReactComponent as Pen } from '../../images/Header/pen.svg';
-import { toast } from 'react-toastify';
 
-export const HeaderEditModal = ({ onClose, avatar, user }) => {
-  const [image, setImage] = useState(avatar);
-  const [name, setName] = useState(user);
-
+export const HeaderEditModal = ({ onClose }) => {
   useEffect(() => {
     const handleKeyDown = e => {
       if (e.code === 'Escape') {
@@ -23,33 +19,6 @@ export const HeaderEditModal = ({ onClose, avatar, user }) => {
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [onClose]);
-
-  const previewOnChangeImg = e => {
-    const [file] = e.target.files;
-    if (file) {
-      setImage(URL.createObjectURL(file));
-    }
-  };
-
-  const handleOnSubmit = async e => {
-    e.preventDefault();
-    const files = e.target.elements[0].files[0];
-    const formData = new FormData();
-
-    if (name === '') {
-      return toast.warning('Please enter your name');
-    }
-    if (files) {
-      formData.append('avatar', files);
-    }
-    if (name) {
-      formData.append('name', name);
-    }
-  };
-
-  const nameOnChange = e => {
-    setName(e.target.value);
-  };
 
   return (
     <>
@@ -65,33 +34,20 @@ export const HeaderEditModal = ({ onClose, avatar, user }) => {
               <CrossIcon className={css.CrossIcon} />
             </button>
             <div className={css.HeaderEditModalStyledImgContainer}>
-              {image ? (
-                <img
-                  className={css.HeaderEditModalStyledImg}
-                  src={image}
-                  alt="CrossIcon"
-                />
-              ) : (
-                <Empty className={css.Empty} />
-              )}
+              <Empty className={css.Empty} />
             </div>
-            <form className={css.HeaderEditModalForm} onSubmit={handleOnSubmit}>
+            <form className={css.HeaderEditModalForm}>
               <label className={css.HeaderEditModalForm}>
                 <input
                   type={'file'}
                   accept={'image/jpeg,image/png,image/gif'}
-                  onChange={previewOnChangeImg}
                   className={css.HeaderEditModalFileInput}
                 />
 
                 <AddPhotoIcon className={css.AddPhotoIcon} />
               </label>
               <label className={css.HeaderEditModalNameLabel}>
-                <input
-                  value={name}
-                  onChange={nameOnChange}
-                  className={css.HeaderEditModalNameInput}
-                />
+                <input className={css.HeaderEditModalNameInput} />
 
                 <Pen className={css.HeaderEditModalPen} />
                 <Man className={css.Man} />
