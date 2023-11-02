@@ -15,29 +15,15 @@ const CategoriesPage = () => {
       <div className={css.CategoriesPage}>
         <h1 className={css.CategoriesPage_h1}>Categories</h1>
 
-        <div >
-          <CategoriesList /> 
+        <div>
+          <CategoriesList />
         </div>
 
         <div>
           <CategoriesGalleryImage />
         </div>
-        <div className={css.rectangle8}>
-          <img src={rectangle8} alt="Black rectangle" />
-        </div>
-        <div className={css.rectangle9}>
-          <img src={rectangle9} alt="Green rectangle" />
-        </div>
-        <div className={css.rectangle11}>
-          <img src={rectangle11} alt="Green rectangle" />
-        </div>
-        <div className={css.spinachImage}>
-          <img src={spinachImage} alt="Spinach Leaves" />
-        </div>
       </div>
-      <div>
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 };

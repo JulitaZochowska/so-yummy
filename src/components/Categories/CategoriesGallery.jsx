@@ -27,6 +27,14 @@ const categoriesGallery = [
     url: pancakes,
     altText: 'Pancakes',
   },
+  {
+    url: pancakes,
+    altText: 'Pancakes',
+  },
+  {
+    url: pancakes,
+    altText: 'Pancakes',
+  },
 ];
 
 function CategoriesGalleryImage() {
