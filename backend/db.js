@@ -1,6 +1,12 @@
 const mongoose = require('mongoose');
 const { mongoConnectionString } = require('./config.js');
 
+class UnknownDatabaseError extends Error {
+  constructor() {
+    super('Something went wrong at database layer.');
+  }
+}
+
 const connect = async () => {
   try {
     await mongoose.connect(mongoConnectionString);
@@ -22,4 +28,5 @@ const disconnect = async () => {
 module.exports = {
   connect,
   disconnect,
+  UnknownDatabaseError,
 };
