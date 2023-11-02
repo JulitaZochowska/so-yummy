@@ -1,6 +1,6 @@
 const { getIngredients } = require('../service/ingredients.service.js');
 
-const getAllIngredientsHandler = async (req, res, next) => {
+const getAllIngredientsHandler = async (res, next) => {
   try {
     const data = await getIngredients();
 
@@ -11,7 +11,6 @@ const getAllIngredientsHandler = async (req, res, next) => {
         description,
         thumb,
       }));
-
       return res.status(200).json({
         status: 'OK',
         code: 200,

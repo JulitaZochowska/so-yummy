@@ -1,4 +1,5 @@
 const { Recipe } = require('../models/recipes.model.js');
+const { Category } = require('../models/categories.model');
 const { UnknownDatabaseError } = require('../db.js');
 
 const addRecipe = async body => {
@@ -42,9 +43,20 @@ const deleteRecipe = async recipeId => {
   }
 };
 
+const getCategories = async () => {
+  try {
+    const categories = await Category.find({});
+    return categories;
+  } catch (error) {
+    console.error(error);
+    throw new UnknownDatabaseError();
+  }
+};
+
 module.exports = {
   addRecipe,
   getOwnRecipes,
   getRecipeById,
   deleteRecipe,
+  getCategories,
 };

@@ -3,6 +3,7 @@ const {
   getOwnRecipes,
   getRecipeById,
   deleteRecipe,
+  getCategories,
 } = require('../service/recipes.service.js');
 const { getUser } = require('../service/users.service.js');
 
@@ -121,8 +122,38 @@ const getOwnRecipesHandler = async (req, res, next) => {
   }
 };
 
+const getCategoriesHandler = async (req, res, next) => {
+  try {
+    const data = await getCategories();
+
+    if (data.length > 0) {
+      const categories = data.map(({ _id, title, thumb, description }) => ({
+        id: _id,
+        name: title,
+        description,
+        thumb,
+      }));
+      return res.status(200).json({
+        status: 'OK',
+        code: 200,
+        categories,
+      });
+    } else {
+      return res.status(404).json({
+        status: 'Not Found',
+        code: 404,
+        message: 'No categories found',
+      });
+    }
+  } catch (error) {
+    console.error(error);
+    return next(error);
+  }
+};
+
 module.exports = {
   addRecipeHandler,
   deleteRecipeHandler,
   getOwnRecipesHandler,
+  getCategoriesHandler,
 };
