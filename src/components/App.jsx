@@ -8,7 +8,6 @@ import SigninPage from 'pages/SigninPage/SigninPage';
 import MainPage from 'pages/MainPage/MainPage';
 import { selectLoggedIn } from 'redux/selectors/users.selectors';
 import { refreshUser } from 'redux/actions/users.actions';
-import { Header } from './Header/Header';
 
 const unathorisedRoute = (
   <Route path="/">
