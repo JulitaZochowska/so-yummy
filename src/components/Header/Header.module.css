@@ -1,0 +1,763 @@
+.HeaderStyled {
+  position: absolute;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 18px;
+  z-index: 3;
+  right: 0;
+  left: 0;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (max-width: 768px) {
+    max-width: 704px;
+  }
+}
+.HeaderStyledLogo {
+  width: 28px;
+  height: 28px;
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.HeaderStyledLogoLink {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background-color: #8baa36;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (min-width: 768px) {
+    width: 44px;
+    height: 44px;
+    margin: auto;
+  }
+  @media (min-width: 930px) {
+    margin-left: 100px;
+  }
+}
+.HeaderStyledLogoLink:hover {
+  transform: scale(1.06);
+}
+
+.HeaderStyledNav {
+  display: none;
+  align-items: center;
+  margin-right: auto;
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+.HeaderStyledNavLink {
+  font-family: 'Poppins';
+  text-decoration: none;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #23262a;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (max-width: 830px) {
+    margin-right: 9px;
+  }
+}
+.HeaderStyledNavLink:last-child {
+  margin-right: 0;
+}
+.HeaderStyledNavLink:hover {
+  color: #8baa36;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1.06);
+}
+.HeaderStyledUser {
+  margin-right: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (min-width: 768px) {
+    margin-right: 0px;
+  }
+  @media (min-width: 940px) {
+    margin-right: 100px;
+  }
+}
+.HeaderStyledUser:hover {
+  transform: scale(1.06);
+}
+.HeaderStyledUser:hover .HeaderStyledUserText {
+  color: #8baa36;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.HeaderStyledUserAvatarConteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  background-color: rgba(217, 217, 217, 1);
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    width: 44px;
+    height: 44px;
+    margin: auto;
+  }
+  @media (min-width: 920px) {
+    margin: auto;
+  }
+}
+.HeaderStyledUserImg {
+  border-radius: 50px;
+  width: 44px;
+  height: 44px;
+  margin-right: 14px;
+
+  @media (max-width: 477px) {
+    width: 34px;
+    height: 34px;
+  }
+}
+.HeaderStyledUserText {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #22252a;
+  margin: 0;
+  margin-left: 14px;
+  @media (min-width: 478px) {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+.BurgerMenuContainer {
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+.BurgerMenuLogoLink {
+  position: absolute;
+  top: 18px;
+  left: 32px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (min-width: 768px) {
+    width: 44px;
+    height: 44px;
+  }
+}
+.BurgerMenuLogoLink:hover {
+  transform: scale(1.06);
+}
+.BurgerMenuBackgroundContainer {
+  background-image: url('../../images/Header/burgermenubackground320.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right 0 bottom 0;
+  position: absolute;
+  width: 321px;
+  height: 190px;
+  bottom: 0;
+  right: 0;
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../../images/Header/burgermenubackground320x2.png');
+  }
+
+  @media (min-width: 478px) {
+    background-image: url('../../images/Header/burgermenubackground480.png');
+    width: 591px;
+    height: 190px;
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../../images/Header/burgermenubackground480x2.png');
+    }
+  }
+}
+.HeaderEditModalOverlayStyled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 200;
+}
+.HeaderEditModalBodyStyled {
+  position: relative;
+  background-color: #fafafa;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 4px 48px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+}
+.HeaderEditModalContainerStyled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px 12px;
+  @media (min-width: 478px) {
+    padding: 50px 40px;
+  }
+}
+.HeaderEditModalForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.HeaderEditModalCloseButtonStyled {
+  border: none;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  cursor: pointer;
+  background-color: transparent;
+  @media (min-width: 478px) {
+    width: 14px;
+    height: 14px;
+    top: 24px;
+    right: 24px;
+  }
+}
+
+.Empty {
+  width: 47px;
+  height: 47px;
+  fill: #d9d9d9;
+}
+.HeaderEditModalStyledImgContainer {
+  height: 103px;
+  width: 103px;
+  background-color: rgba(217, 217, 217, 1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 50px;
+  @media (min-width: 478px) {
+    margin-bottom: 52px;
+  }
+}
+.HeaderEditModalForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.HeaderEditModalFileLabel {
+  position: absolute;
+  top: 102px;
+  left: 172px;
+  @media (min-width: 478px) {
+    top: 131px;
+    left: 258px;
+  }
+  cursor: pointer;
+}
+.AddPhotoIcon {
+  position: absolute;
+  top: 102px;
+  left: 172px;
+  width: 24px;
+  height: 24px;
+  @media (min-width: 478px) {
+    top: 131px;
+    left: 258px;
+  }
+}
+.HeaderEditModalFileInput {
+  display: none;
+}
+.HeaderEditModalNameLabel {
+  position: relative;
+}
+.HeaderEditModalNameInput {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+  width: 282px;
+  height: 48px;
+  border: 1px solid #afafaf;
+  border-radius: 4px;
+  padding-left: 39px;
+  padding-right: 42px;
+  opacity: 0.8;
+  margin-bottom: 24px;
+  color: #23262a;
+  transition-property: border-color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (min-width: 478px) {
+    width: 400px;
+    height: 58px;
+    padding-left: 51px;
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+.HeaderEditModalNameInput::selection {
+  border-color: #8baa36;
+}
+
+.HeaderEditModalPen {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 251px;
+  top: 15px;
+  stroke: #23262a;
+  stroke-width: 1;
+  stop-color: #22252a;
+  @media (min-width: 478px) {
+    top: 20px;
+    width: 19px;
+    height: 19px;
+    left: 363px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.Pen:hover {
+  stroke: #8baa36;
+}
+
+.Man {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 100px;
+  stroke: black;
+  @media (min-width: 478px) {
+    width: 24px;
+    height: 24px;
+    left: 19px;
+    top: 17px;
+  }
+}
+.Man:hover {
+  stroke: #8baa36;
+}
+.HeaderEditModalSubmitButton {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-family: 'Poppins';
+  border: none;
+  background-color: #8baa36;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fafafa;
+  border-radius: 6px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  width: 282px;
+  @media (min-width: 478px) {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-size: 16px;
+    line-height: 18px;
+    width: 400px;
+  }
+}
+.HeaderEditModalSubmitButton:hover {
+  color: #d3d3d3;
+  background-color: rgba(34, 37, 42, 1);
+}
+
+.HeaderLogoutModalOverlayStyled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 200;
+}
+.HeaderLogoutModalBodyStyled {
+  position: relative;
+  background-color: #fafafa;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 4px 48px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+}
+.HeaderLogoutModalContainerStyled {
+  padding: 30px 10px;
+  @media (min-width: 478px) {
+    padding: 50px 40px;
+  }
+}
+.HeaderLogoutModalCloseButtonStyled {
+  border: none;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  cursor: pointer;
+  background-color: transparent;
+  @media (min-width: 478px) {
+    width: 14px;
+    height: 14px;
+    top: 24px;
+    right: 24px;
+  }
+}
+.HeaderLogoutModalTextStyled {
+  margin: 0;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  color: #23262a;
+  @media (min-width: 478px) {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 32px;
+  }
+}
+.HeaderLogoutModalButtonsContainerStyled {
+  display: flex;
+}
+.HeaderLogoutModalLogoutButtonStyled {
+  font-family: 'Poppins';
+  border: none;
+  background-color: #8baa36;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fafafa;
+  border-radius: 6px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 14px 18px;
+  width: 137px;
+  margin-right: 8px;
+  transition-property: color, background-color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (min-width: 478px) {
+    width: 192px;
+    padding: 18px 39px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+.HeaderLogoutModalLogoutButtonStyled:hover {
+  color: #d3d3d3;
+  background-color: rgba(30, 31, 40, 1);
+}
+.HeaderLogoutModalCancelButtonStyled {
+  font-family: 'Poppins';
+  border: none;
+  background-color: #d9d9d9;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #23262a;
+  border-radius: 6px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 14px 18px;
+  width: 137px;
+  transition-property: color, background-color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (min-width: 478px) {
+    width: 192px;
+    padding: 18px 39px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+.HeaderLogoutModalCancelButtonStyled:hover {
+  color: rgba(35, 38, 42, 1);
+  background-color: white;
+}
+.HeaderUserModalOverlayStyled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  z-index: 200;
+}
+.HeaderUserModalContainer {
+  max-width: 1440px;
+  height: 100%;
+  width: 1440px;
+  top: 0;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: 375px) {
+    max-width: 343px;
+    width: 343px;
+  }
+  @media (max-width: 768px) {
+    max-width: 704px;
+    width: 704px;
+  }
+}
+.HeaderUserModalBodyStyled {
+  position: absolute;
+  background-color: #fafafa;
+  border-radius: 4px;
+  border: 1px solid #8baa36;
+  top: 72px;
+  right: 20px;
+  @media (min-width: 478px) {
+    top: 78px;
+  }
+}
+.HeaderUserModalContainerStyled {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  align-items: center;
+}
+.HeaderUserModalContainerStyled:hover {
+  color: #8baa36;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.MagnifyingGlass {
+  color: rgba(30, 31, 40, 1);
+  height: 24px;
+  width: 24px;
+}
+.MagnifyingGlass:hover {
+  cursor: pointer;
+  transform: scale(1.06);
+  color: #8baa36;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.HeaderUserModalPen {
+  margin-left: 37px;
+  width: 14px;
+  height: 14px;
+  stroke: #23262a;
+  @media (min-width: 478px) {
+    margin-left: 53px;
+  }
+  color: rgba(30, 31, 40, 1);
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.HeaderUserModalPen:hover {
+  color: #8baa36;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.HeaderUserModalEditButton {
+  font-family: 'Poppins';
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #23262a;
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (min-width: 478px) {
+    margin-bottom: 32px;
+  }
+}
+.HeaderUserModalEditButton:hover {
+  color: #8baa36;
+}
+.HeaderUserModalEditButton:hover .HeaderUserModalPen {
+  color: #8baa36;
+}
+.HeaderUserModalLogoutButton {
+  font-family: 'Poppins';
+  border: none;
+  background-color: #8baa36;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  border-radius: 24px 44px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 12px 24px;
+  width: 125px;
+  transition-property: color, background-color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (min-width: 478px) {
+    width: 141px;
+    padding: 12px 32px;
+  }
+}
+.HeaderUserModalLogoutButton:hover {
+  color: #d3d3d3;
+
+  background-color: rgba(34, 37, 42, 1);
+}
+.CrossIcon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 24px;
+  height: 24px;
+}
+.BurgerMenuBurgerIcon {
+  background-color: #8baa36;
+}
+.BurgerMenuMagnifyingGlass {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+
+  @media (min-width: 478px) {
+    width: 21px;
+    height: 21px;
+  }
+}
+
+.BurgerMenuStyledNavLink {
+  position: relative;
+  z-index: 1;
+  font-family: 'Poppins';
+  text-decoration: none;
+  margin-bottom: 32px;
+  line-height: 1.6;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  color: #22252a;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @media (min-width: 478px) {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 40px;
+  }
+}
+.BurgerMenuStyledNavLink:hover {
+  color: #8baa36;
+}
+.BurgerMenuStyledNavLink:last-of-type:hover .BurgerMenuMagnifyingGlass {
+  margin-bottom: 0;
+  color: #8baa36;
+}
+
+.HeaderStyledLogoBurgerLink {
+  height: 44px;
+  width: 44px;
+  background-color: #8baa36;
+}
+.HeaderStyledLogoBurger {
+  height: 30px;
+  width: 30px;
+}
+.BurgerMenuX {
+  width: 40px;
+  height: 40px;
+}
