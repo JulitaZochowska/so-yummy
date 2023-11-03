@@ -1,0 +1,84 @@
+.spinachLeft {
+  position: absolute;
+  width: 116px;
+  height: 398px;
+  background-image: url(../../images/main-page/spinach-left.png);
+}
+
+.searchSection {
+  position: absolute;
+  left: 100px;
+  top: 226px;
+}
+
+.searchSection h1 {
+  text-align: center;
+  font-family: Poppins;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100px;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.greenText {
+  color: #8baa36;
+}
+
+.searchSection .searchSectionText {
+  color: #23262a;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.36px;
+  margin-top: 14px;
+  margin-left: 7px;
+  width: 465px;
+}
+
+.searchBox {
+  display: flex;
+  height: 70px;
+  max-width: 510px;
+  font-size: 16px;
+  font-family: Poppins;
+  margin-top: 50px;
+}
+
+.searchInput {
+  border-style: solid;
+  outline-offset: -2px;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-grow: 1;
+  filter: drop-shadow(0px 4px 97px rgba(34, 37, 42, 0.03));
+  border-radius: 30px;
+  border-width: 1px;
+  border-color: #f0f0f0;
+  padding-right: 185px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 3rem;
+  border-radius: 25px 45px 25px 45px;
+  color: #bdbdbd;
+}
+
+.searchButton {
+  position: absolute;
+  left: auto;
+  right: 0px;
+  cursor: pointer;
+  height: 70px;
+  width: 161px;
+  border-radius: 25px 45px 25px 45px;
+  background-color: #22252a;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #fafafa;
+}

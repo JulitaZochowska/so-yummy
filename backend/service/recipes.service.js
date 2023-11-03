@@ -53,10 +53,21 @@ const getCategories = async () => {
   }
 };
 
+const getCategoryRecipes = async categoryId => {
+  try {
+    const recipes = await Recipe.find({ category: categoryId });
+    return recipes;
+  } catch (error) {
+    console.error(error);
+    throw new UnknownDatabaseError();
+  }
+};
+
 module.exports = {
   addRecipe,
   getOwnRecipes,
   getRecipeById,
   deleteRecipe,
   getCategories,
+  getCategoryRecipes,
 };

@@ -8,18 +8,30 @@ import SigninPage from 'pages/SigninPage/SigninPage';
 import MainPage from 'pages/MainPage/MainPage';
 import { selectLoggedIn } from 'redux/selectors/users.selectors';
 import { refreshUser } from 'redux/actions/users.actions';
+import { Navigate } from 'react-router-dom';
+import RecipesPage from 'pages/RecipesPage/RecipesPage';
+import CategoriesPage from 'pages/CategoriesPage/CategoriesPage';
+import SearchPage from 'pages/SearchPage/SearchPage';
 
 const unathorisedRoute = (
   <Route path="/">
     <Route index element={<WelcomePage />}></Route>
     <Route path="/register" element={<RegisterPage />}></Route>
     <Route path="/signin" element={<SigninPage />}></Route>
+    <Route path="*" element={<Navigate replace to={'/'} />}></Route>
   </Route>
 );
 
 const authorisedRoute = (
   <Route path="/" element={<Layout />}>
-    <Route index element={<MainPage />} />
+    <Route index element={<Navigate replace to={'/main'} />} />
+    <Route path="/main" element={<MainPage />} />
+    <Route path="/recipe/:recipeId" element={<RecipesPage />} />
+    <Route path="/categories" element={<CategoriesPage />} />
+    <Route path="/categories/:categoryName" element={<CategoriesPage />} />
+    <Route path="/search" element={<SearchPage />} />
+
+    <Route path="*" element={<Navigate replace to={'/main'} />}></Route>
   </Route>
 );
 
