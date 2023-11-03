@@ -15,7 +15,6 @@ const unathorisedRoute = (
     <Route index element={<WelcomePage />}></Route>
     <Route path="/register" element={<RegisterPage />}></Route>
     <Route path="/signin" element={<SigninPage />}></Route>
-    <Route path="/header" element={<Header />}></Route>
   </Route>
 );
 
