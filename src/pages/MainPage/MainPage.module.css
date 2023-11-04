@@ -1,0 +1,31 @@
+.headerContainer {
+  height: 800px;
+}
+
+.otherCategoriesContainer {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.otherCategoriesButton {
+  cursor: pointer;
+  height: 61px;
+  width: 239px;
+
+  border-radius: 25px 45px 25px 45px;
+  border-width: 2px;
+  border-color: #8baa36;
+
+  background-color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  color: #22252a;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

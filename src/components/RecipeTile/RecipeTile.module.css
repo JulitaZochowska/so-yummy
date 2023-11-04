@@ -1,0 +1,37 @@
+.recipeTile {
+  width: 300px;
+  height: 323px;
+  cursor: pointer;
+}
+
+.recipeImage {
+  width: 300px;
+  height: 323px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.recipeTitle {
+  position: absolute;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 247px;
+
+  width: 268px;
+  height: 52px;
+  border-radius: 8px;
+  background-color: white;
+  text-align: center;
+
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}

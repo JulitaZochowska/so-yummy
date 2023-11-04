@@ -4,6 +4,7 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import css from './Layout.module.css';
 import { Loader } from 'components/Loader/Loader';
+import { ToastContainer } from 'react-toastify';
 
 export const Layout = () => {
   return (
@@ -15,6 +16,7 @@ export const Layout = () => {
         </Suspense>
       </div>
       <Footer />
+      <ToastContainer autoClose={4000} />
     </div>
   );
 };
