@@ -4,6 +4,8 @@ const {
   getCategoriesHandler,
   getCategoryRecipesHandler,
   getRecipeByIdHandler,
+  getRecipesByTitleHandler,
+  getRecipesMainPageHandler,
 } = require('../controllers/recipes.controller.js');
 
 const recipesRouter = express.Router();
@@ -14,6 +16,8 @@ recipesRouter.get(
   authMiddleware,
   getCategoryRecipesHandler
 );
-recipesRouter.get('/:id', authMiddleware, getRecipeByIdHandler);
+recipesRouter.get('/main-page', authMiddleware, getRecipesMainPageHandler);
+recipesRouter.get('/search', authMiddleware, getRecipesByTitleHandler);
+recipesRouter.get('/:recipeId', authMiddleware, getRecipeByIdHandler);
 
 module.exports = recipesRouter;
