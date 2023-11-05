@@ -1,0 +1,8 @@
+.BoxForLoader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(30, 31, 40, 1);
+}

@@ -1,0 +1,53 @@
+.upperContainer {
+  text-align: center;
+}
+
+.recipesContainer {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 50px;
+  text-align: left;
+}
+
+.recipesLine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 14px;
+}
+
+.categoryTitle {
+  color: #001833;
+
+  font-family: Poppins;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 44px;
+  /* 100% */
+  letter-spacing: -0.88px;
+  margin: 0;
+}
+
+.right {
+  text-align: right;
+}
+
+.seeAllButton {
+  padding: 10px 24px;
+  width: 94px;
+  height: 38px;
+  border-radius: 6px;
+  border: 0;
+  background: #8aa936;
+  cursor: pointer;
+
+  color: #fafafa;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}

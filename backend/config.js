@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 module.exports = {
-  serverPort: process.env.PORT || 3030,
+  serverPort: process.env.SERVER_PORT || 3030,
   jwtSecret: process.env.JWT_SECRET,
   jwtLifetime: process.env.JWT_LIFETIME,
   mongoConnectionString: process.env.MONGO_URI,

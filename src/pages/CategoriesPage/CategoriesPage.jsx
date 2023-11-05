@@ -4,7 +4,8 @@ import css from './CategoriesPage.module.css';
 import CategoriesGalleryImage from 'components/Categories/CategoriesGallery';
 import CategoriesList from 'components/CategoriesList/CategoriesList'; // Corrected import
 
-const CategoriesPage = () => {
+const CategoriesPage = _ => {
+  const { categoryName } = useParams();
   return (
     <div>
       <Header />

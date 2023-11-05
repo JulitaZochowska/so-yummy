@@ -8,6 +8,7 @@ const initialState = {
   isRegistered: false,
   isLoggedIn: false,
   isRefreshing: false,
+  avatar: null,
 };
 
 const usersSlice = createSlice({

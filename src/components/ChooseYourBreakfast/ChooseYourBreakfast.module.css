@@ -1,0 +1,81 @@
+.backgroundBlock {
+  position: absolute;
+  left: auto;
+  right: 0px;
+  width: 913px;
+  height: 800px;
+}
+
+.backgroundRight {
+  position: absolute;
+  left: auto;
+  right: 0px;
+  width: 725px;
+  height: 689px;
+  background-image: url(../../images/main-page/bg-right.svg);
+}
+
+.spinachRight {
+  position: absolute;
+  width: 913px;
+  height: 800px;
+  background-image: url(../../images/main-page/spinach-right.png);
+}
+
+.flipArrow {
+  position: absolute;
+  left: auto;
+  right: 183px;
+  top: 539px;
+  width: 220px;
+  height: 148px;
+  background-image: url(../../images/main-page/flip-arrow.svg);
+}
+
+.plate {
+  position: absolute;
+  top: 126px;
+  right: 184px;
+  width: 578px;
+  height: 539px;
+  background-image: url(../../images/main-page/plate.png);
+}
+
+.chooseYourBreakfastBlock {
+  position: absolute;
+  left: auto;
+  right: 122px;
+  top: 462px;
+  border-radius: 8px;
+  width: 298px;
+  height: 114px;
+  padding: 16px;
+  background-color: white;
+
+  color: #3e4462;
+
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+}
+
+.chooseYourBreakfastBlockLink {
+  color: #3e4462;
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.2px;
+}
+
+.greenText {
+  color: #8baa36;
+}
