@@ -6,7 +6,6 @@ import WelcomePage from 'pages/WelcomePage/WelcomePage';
 import RegisterPage from 'pages/RegisterPage/RegisterPage';
 import SigninPage from 'pages/SigninPage/SigninPage';
 import MainPage from 'pages/MainPage/MainPage';
-import CategoriesPage from 'pages/CategoriesPage/CategoriesPage';
 import { selectLoggedIn } from 'redux/selectors/users.selectors';
 import { refreshUser } from 'redux/actions/users.actions';
 import { Navigate } from 'react-router-dom';
@@ -48,7 +47,6 @@ export const App = () => {
       <Routes>{isLogged ? authorisedRoute : unathorisedRoute}</Routes>
     </div>
   );
-
 };
 
 export default App;

@@ -1,32 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import css from 'pages/CategoriesPage/CategoriesPage.module.css';
+import { fetchCategoriesList } from 'redux/actions/recipes.actions';
+import { selectCategoriesList } from 'redux/selectors/recipes.selectors';
 
-const categories = [
-  'Beef',
-  'Breakfast',
-  'Chicken',
-  'Desserts',
-  'Goat',
-  'Lamb',
-  'Miscelanous',
-  'Pasta',
-  'Pork',
-  'Seafood',
-  'Side'
-];
+const CategoriesList = () => {
+  const dispatch = useDispatch();
 
-function CategoriesList() {
-  const categoriesListElements = categories.map(category => (
-    <nav key={category}>
-      <h2 className={css.CategoriesPage_nav_h2}>{category}</h2>
+  useEffect(() => {
+    dispatch(fetchCategoriesList());
+  }, [dispatch]);
+
+  const categoryList = useSelector(selectCategoriesList);
+  const categoriesListElements = categoryList.map(category => (
+    <nav key={category.name}>
+      <h2 className={css.CategoriesPage_nav_h2}>{category.name}</h2>
     </nav>
   ));
 
-  return (
-    <div className={css.CategoriesPage_nav}>
-      {categoriesListElements}
-    </div>
-  );
-}
+  return <div className={css.CategoriesPage_nav}>{categoriesListElements}</div>;
+};
 
 export default CategoriesList;

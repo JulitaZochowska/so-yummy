@@ -98,33 +98,7 @@
     opacity: 1; /* Make the border visible on hover */
   }
   
-  .spinachImage {
-    width: 558px;
-    height: 852px;
-    top: 788.96px;
-    position: absolute; /* Position the image absolutely within the container */
-  }
-  .rectangle11 {
-    width: 14px;
-    height: 14px;
-    top: 38px;
-    left: 228px;
-    position: absolute;
-  }
-  .rectangle8 {
-    width: 14px;
-    height: 14px;
-    top: 100px;
-    left: 707px;
-    position: absolute;
-  }
-  .rectangle9 {
-    width: 14px;
-    height: 14px;
-    top: 50px;
-    left: 1150px;
-    position: absolute;
-  }
+ 
   .container {
     width: 100%;
     display: flex;
