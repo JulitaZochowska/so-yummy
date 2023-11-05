@@ -5,6 +5,7 @@ import RecipeTile from 'components/RecipeTile/RecipeTile';
 import { fetchCategoryRecipes, fetchCategoriesList } from 'redux/actions/recipes.actions';
 import { selectSelectedCategoryName } from 'redux/selectors/recipes.selectors';
 import { useNavigate } from 'react-router-dom';
+import { Loader } from 'components/Loader/Loader';
 
 const CategoriesGalleryImage = () => {
   const dispatch = useDispatch();
@@ -36,7 +37,7 @@ const CategoriesGalleryImage = () => {
           ></RecipeTile>
         ))
       ) : (
-        <p>No recipes available for the selected category.</p>
+        <Loader/>
       )}
     </div>
   );
