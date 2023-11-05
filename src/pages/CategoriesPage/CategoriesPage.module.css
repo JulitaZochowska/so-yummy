@@ -24,49 +24,7 @@
     justify-content: space-around;
     border-bottom: 1px solid #E0E0E0;
   }
-  /* categoriesGalleryImage.css (or your preferred CSS file) */
-
-.CategoriesPage_gallery {
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Create four equal-width columns */
-  grid-column-gap: 14px; /* Adjust the gap between columns as needed */
-  grid-row-gap: 100px;
-  align-content: center;
-  width: 1242px;
-  margin-left: 54px;
-}
-
-.CategoriesGallery_element {
-  position: relative;
-  width: 300px; /* Each element should take 100% of its grid cell width */
-  height: auto; /* Adjust height as needed */
-}
-
-.CategoriesGallery_name {
-  width: 268px;
-  background-color: white;
-  position: absolute;
-  top: 247px;
-  left: 16px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-}
-
-.CategoriesGallery_h2 {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: -0.24px;
-  text-align: left;
-  color: #3E4462;
-  margin: 0;
-  padding: 8px 16px; /* Adjust the padding as needed */
-  display: block;
-}
-
+ 
   .CategoriesPage_nav_h2 {
     position: relative;
     font-size: 18px;

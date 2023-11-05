@@ -1,7 +1,10 @@
-.recipesLine {
+.recipesGrid {
+    padding-top: 50px;
     display: flex;
-    justify-content: center;
+    justify-content:flex-start;
     align-items: center;
-    align-content: center;
     gap: 14px;
+    list-style: none;
+    flex-wrap: wrap;
+    max-width: 100%;
   }
