@@ -16,51 +16,9 @@
     letter-spacing: -0.88px;
     margin: 0;
   }
-  .CategoriesPage_nav {
-    margin-top: 100px;
-    display: flex;
-    width: 1350px;
-    height: 56px;
-    justify-content: space-around;
-    border-bottom: 1px solid #E0E0E0;
-  }
+  
  
-  .CategoriesPage_nav_h2 {
-    position: relative;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #BDBDBD;
-    display: block;
-  }
   
-  .CategoriesPage_nav_h2::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -23px; /* Adjust this value to control the distance from the text */
-    width: 0; /* Start with zero width */
-    height: 2px; /* Adjust this value to control the thickness of the border */
-    background-color: #8BAA36; /* Color of the border */
-    transition: width 0.1s, opacity 0.1s; /* Add a transition for a smooth effect */
-    opacity: 0; /* Initially, make the border invisible */
-  }
-  
-  .CategoriesPage_nav_h2.selected::after {
-    width: 100%; /* Make the border the same width as the text */
-    opacity: 1; /* Make the border visible on selection */
-  }
-  
-  .CategoriesPage_nav_h2:hover {
-    color: #8BAA36;
-    cursor: pointer;
-  }
-  .CategoriesPage_nav_h2:hover::after {
-    width: 100%; /* Make the border the same width as the text */
-    opacity: 1; /* Make the border visible on hover */
-  }
   
  
   .container {

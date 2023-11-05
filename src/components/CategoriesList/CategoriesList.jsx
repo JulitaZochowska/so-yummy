@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import css from 'pages/CategoriesPage/CategoriesPage.module.css';
+import css from './CategoriesList.module.css';
 import { fetchCategoriesList } from 'redux/actions/recipes.actions';
 import { selectCategoriesList } from 'redux/selectors/recipes.selectors';
 
