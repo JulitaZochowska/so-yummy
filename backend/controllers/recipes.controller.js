@@ -176,10 +176,19 @@ const getCategoryRecipesHandler = async (req, res, next) => {
   }
 };
 
+const getRecipeByIdHandler = async (req, res, next) => {
+  try {
+  } catch (error) {
+    console.error(error);
+    return next(error);
+  }
+};
+
 module.exports = {
   addRecipeHandler,
   deleteRecipeHandler,
   getOwnRecipesHandler,
   getCategoriesHandler,
   getCategoryRecipesHandler,
+  getRecipeByIdHandler,
 };

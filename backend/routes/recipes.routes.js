@@ -3,6 +3,7 @@ const { authMiddleware } = require('../service/auth.service.js');
 const {
   getCategoriesHandler,
   getCategoryRecipesHandler,
+  getRecipeByIdHandler,
 } = require('../controllers/recipes.controller.js');
 
 const recipesRouter = express.Router();
@@ -13,5 +14,6 @@ recipesRouter.get(
   authMiddleware,
   getCategoryRecipesHandler
 );
+recipesRouter.get('/:id', authMiddleware, getRecipeByIdHandler);
 
 module.exports = recipesRouter;
