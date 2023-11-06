@@ -11,9 +11,7 @@ export const RecipesPage = _ => {
   // // useParams();
   console.log(recipeId);
 
-  const recipe = recipesData.filter(
-    recipe => recipe._id.$oid === '640cd5ac2d9fecf12e8897f5'
-  );
+  const recipe = recipesData.filter(recipe => recipe._id.$oid === recipeId);
   console.log(recipe);
   const { title, description, time, thumb, _id, ingredients, instructions } =
     recipe[0];
