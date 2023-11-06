@@ -35,8 +35,6 @@ export default function RecipeIngredientsList({ requiredIngredients }) {
                 <input
                   className={css.RecipeListListLiInpiutInput}
                   type="checkbox"
-                  //   checked={shoppingList.some(item => item.id === id.$oid)}
-                  //   onChange={() => handleCheckboxChange(id, measure)}
                 />
               </div>
             </li>
