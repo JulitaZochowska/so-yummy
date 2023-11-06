@@ -1,0 +1,59 @@
+.container {
+  width: 100%;
+  margin-bottom: 18px;
+}
+.headline {
+  color: #3e4462;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.48px;
+  margin: 0 0 24px 0;
+}
+.headlineContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.headlineContainer textarea {
+  color: #000;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  width: 100%;
+  height: 154px;
+  padding: 16px 16px 16px 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: rgba(217, 217, 217, 0.357);
+  outline: none;
+  opacity: 1;
+  resize: none;
+}
+.headlineContainer textarea::placeholder {
+  color: #000;
+  font-size: 14px;
+  letter-spacing: -0.28px;
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin-bottom: 32px;
+  }
+  .headline {
+    margin: 0 0 32px 0;
+  }
+  .headlineContainer textarea {
+    font-size: 18px;
+
+    letter-spacing: -0.36px;
+    width: 505px;
+    height: 224px;
+  }
+  .headlineContainer textarea::placeholder {
+    font-size: 18px;
+    letter-spacing: -0.36px;
+  }
+}

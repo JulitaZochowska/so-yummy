@@ -1,6 +1,6 @@
 const { getIngredients } = require('../service/ingredients.service.js');
 
-const getAllIngredientsHandler = async (res, next) => {
+const getAllIngredientsHandler = async (req, res, next) => {
   try {
     const data = await getIngredients();
 

@@ -1,0 +1,115 @@
+.container {
+  width: 100%;
+  margin-bottom: 44px;
+}
+.headline {
+  color: #3e4462;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.48px;
+  margin: 0;
+}
+.headlineContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 28px;
+  border-radius: 18px;
+  border: 1px solid rgba(51, 51, 51, 0.3);
+  position: relative;
+}
+.buttonMinus {
+  background-color: transparent;
+  border: none;
+  padding-left: 14px;
+  padding-right: 18.5px;
+  display: flex;
+  cursor: pointer;
+}
+.buttonPlus {
+  background-color: transparent;
+  border: none;
+  padding-left: 18.5px;
+  padding-right: 14px;
+  display: flex;
+  cursor: pointer;
+}
+.buttons p {
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.28;
+  margin: 0;
+  position: absolute;
+}
+.delete {
+  cursor: pointer;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item:not(:last-child) {
+  margin-bottom: 18px;
+}
+.item button {
+  background-color: transparent;
+  border: none;
+}
+.inputContainer {
+  display: flex;
+}
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-right: 14px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    margin-bottom: 100px;
+  }
+  .headlineContainer {
+    margin-bottom: 32px;
+  }
+  .item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  .buttons {
+    height: 32px;
+  }
+  .buttonMinus {
+    background-color: transparent;
+    border: none;
+    padding-left: 15px;
+    padding-right: 20px;
+    display: flex;
+  }
+  .buttonPlus {
+    background-color: transparent;
+    border: none;
+    padding-left: 20px;
+    padding-right: 15px;
+    display: flex;
+  }
+  .buttons p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    margin-bottom: 100px;
+    max-width: 609px;
+  }
+}

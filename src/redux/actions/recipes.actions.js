@@ -1,5 +1,6 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import 'react-toastify/dist/ReactToastify.css';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
 axios.defaults.baseURL = 'http://localhost:3030';
 
@@ -18,6 +19,22 @@ export const fetchCategoryRecipes = createAsyncThunk(
       return response.data;
     } catch (error) {
       console.log(error, 'error');
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const addRecipe = createAsyncThunk(
+  'RECIPES/ADD',
+  async (body, thunkAPI) => {
+    try {
+      const { data } = await axios.post('/ownRecipes/add', body, {
+        headers: {
+          Authorization: `Bearer ${thunkAPI.getState().users.token}`,
+        },
+      });
+      return data;
+    } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
   }
