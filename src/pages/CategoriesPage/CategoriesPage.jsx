@@ -1,12 +1,19 @@
-import React from 'react';
 import { useParams } from 'react-router-dom';
+import css from './CategoriesPage.module.css';
+import CategoriesGalleryImage from 'components/Categories/CategoriesGallery';
+import CategoriesList from 'components/CategoriesList/CategoriesList';
 
-export const CategoriesPage = _ => {
+const CategoriesPage = _ => {
   const { categoryName } = useParams();
   return (
-    <div>
-      Categories works! Name:{' '}
-      {categoryName ?? 'No category name - page for all categories'}
+    <div className={css.CategoriesPage}>
+      <h1 className={css.CategoriesPage_h1}>Categories</h1>
+      <div>
+        <CategoriesList />
+      </div>
+      <div>
+        <CategoriesGalleryImage />
+      </div>
     </div>
   );
 };

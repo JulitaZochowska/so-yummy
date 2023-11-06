@@ -22,3 +22,19 @@ export const fetchCategoryRecipes = createAsyncThunk(
     }
   }
 );
+
+export const fetchCategoriesList = createAsyncThunk(
+  'recipes/FETCH_CATEGORIES_LIST',
+  async (_, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const token = state.users.token;
+    setHeader(token);
+    try {
+      const response = await axios.get('/recipes/category-list');
+      return response.data;
+    } catch (error) {
+      console.error(error);
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
