@@ -9,10 +9,10 @@ import { useParams } from 'react-router-dom';
 export const RecipesPage = _ => {
   const { recipeId } = useParams();
   // // useParams();
-  console.log(recipeId);
+  // console.log(recipeId);
 
   const recipe = recipesData.filter(recipe => recipe._id.$oid === recipeId);
-  console.log(recipe);
+  // console.log(recipe);
   const { title, description, time, thumb, _id, ingredients, instructions } =
     recipe[0];
   return (
