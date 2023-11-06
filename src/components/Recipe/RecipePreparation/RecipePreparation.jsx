@@ -36,7 +36,7 @@ export default function RecipePreparation({ instructions, thumb, title }) {
           })}
         </ul>
       </div>
-      <div
+      <img
         className={css.RecipePreparationListItemImage}
         src={thumb}
         alt={title}
