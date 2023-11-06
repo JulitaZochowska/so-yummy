@@ -1,0 +1,203 @@
+/* Footer.css */
+
+.FooterContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 28px;
+    background: #22252A;
+    height: 435px;
+    width: 100%;
+  
+    @media (min-width: 768px) {
+      height: 423px;
+      display: block;
+      flex-direction: row;
+      align-items: center;
+      padding-top: 50px;
+    }
+    @media (min-width: 918px) and (max-width: 1439px) {
+      height: 414px;
+    }
+    @media (min-width: 1440px) {
+      height: 414px;
+      
+    }
+  }
+  
+  .MainBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    @media (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  
+    @media (min-width: 918px) and (max-width: 1439px) {
+      /* padding-top: 45px; */
+    }
+  
+    @media (min-width: 1440px) {
+      display: flex;
+      align-items: stretch;
+      
+    }
+  }
+  
+  .MenuBox {
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  
+  .FormBox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 44px;
+  
+    @media (min-width: 768px) {
+      margin-bottom: 38px;
+    }
+  
+    @media (min-width: 918px) {
+      flex-direction: column;
+    }
+  
+    @media (min-width: 1440px) {
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+  
+  .DescriptionWrapper {
+    margin-bottom: 32px;
+  
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 72px;
+    }
+  
+    @media (min-width: 1440px) {
+      gap: 40px;
+    }
+  }
+  
+  .LogoBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  
+    @media (min-width: 768px) {
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+  
+    @media (min-width: 1440px) {
+      margin: 0;
+    }
+  }
+  
+  .LogoLink {
+    display: flex;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+  
+    :hover,
+    :focus {
+      transform: scale(1.1);
+    }
+  
+    @media (min-width: 768px) {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+    }
+  }
+  
+  .FooterTitle {
+    color: rgba(250, 250, 250, 1);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0.015em;
+  
+    @media (min-width: 768px) {
+      font-size: 28px;
+      line-height: 28px;
+    }
+  }
+  
+  .BenefitsList {
+    display: none;
+    list-style: disc;
+  
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    @media (min-width: 1440px) {
+      gap: 12px;
+    }
+  }
+  
+  .Benefits {
+    color: rgba(250, 250, 250, 1); /* Zastąp to odpowiednim kolorem */
+  
+    @media (min-width: 768px) {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+  
+  .BenefitsText {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    font-family: 'Poppins';
+    font-style: normal;
+    padding: 0;
+  }
+  
+  .MenuItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  
+    @media (min-width: 768px) {
+      align-items: flex-start;
+      gap: 18px;
+    }
+  
+    @media (min-width: 1440px) {
+      gap: 24px;
+    }
+  }
+  
+  .Item {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    color: rgba(250, 250, 250, 1); /* Zastąp to odpowiednim kolorem */
+    letter-spacing: -0.02em;
+  
+    
+  }
+  
+  
+  
