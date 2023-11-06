@@ -1,4 +1,4 @@
-import ingredientsData from '../mock/ingredients.json';
+import ingredientsData from '../mock/soyummy.ingredients.json';
 import css from '../RecipeList/RecipeList.module.css';
 
 export default function RecipeIngredientsList({ requiredIngredients }) {
@@ -15,7 +15,7 @@ export default function RecipeIngredientsList({ requiredIngredients }) {
       </div>
       <ul className={css.RecipeListList}>
         {requiredIngredients.map(({ id, measure }) => {
-          const { ttl, thb, desc } = allIngredient.find(
+          const { title, thumb, description } = allIngredient.find(
             ({ _id }) => _id.$oid === id.$oid
           );
           return (
@@ -23,10 +23,10 @@ export default function RecipeIngredientsList({ requiredIngredients }) {
               <div className={css.RecipeListListLiDiv}>
                 <img
                   className={css.RecipeListListLiDivImg}
-                  src={thb}
-                  alt={desc}
+                  src={thumb}
+                  alt={description}
                 />
-                <span className={css.RecipeListListLiDivTitle}>{ttl}</span>
+                <span className={css.RecipeListListLiDivTitle}>{title}</span>
               </div>
               <div className={css.RecipeListListLiInpiut}>
                 <span className={css.RecipeListListLiInpiutMesure}>
