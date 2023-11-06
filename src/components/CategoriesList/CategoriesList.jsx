@@ -12,25 +12,29 @@ const CategoriesList = () => {
     dispatch(fetchCategoriesList());
   }, [dispatch]);
 
-  const handleCategoryClick = (category) => {
+  const handleCategoryClick = category => {
     setSelectedCategory(category);
   };
 
   const categoryList = useSelector(selectCategoriesList); // Corrected the variable name
 
-  const categoriesListElements = categoryList.map((category) => ( // Corrected the variable name
-    <nav key={category.name}>
-      <h2
-        className={css.CategoriesPage_nav_h2}
-        onClick={() => handleCategoryClick(category.name)}
-        style={{
-          color: selectedCategory === category.name ? '#8BAA36' : '#BDBDBD',
-        }}
-      >
-        {category.name}
-      </h2>
-    </nav>
-  ));
+  const categoriesListElements = categoryList?.map(
+    (
+      category // Corrected the variable name
+    ) => (
+      <nav key={category.name}>
+        <h2
+          className={css.CategoriesPage_nav_h2}
+          onClick={() => handleCategoryClick(category.name)}
+          style={{
+            color: selectedCategory === category.name ? '#8BAA36' : '#BDBDBD',
+          }}
+        >
+          {category.name}
+        </h2>
+      </nav>
+    )
+  );
 
   return <div className={css.CategoriesPage_nav}>{categoriesListElements}</div>;
 };

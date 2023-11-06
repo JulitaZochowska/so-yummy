@@ -15,7 +15,7 @@ export const Header = () => {
           <Link to={'categories'} className={css.HeaderStyledNavLink}>
             Categories
           </Link>
-          <Link className={css.HeaderStyledNavLink} to={'add-recipe'}>
+          <Link className={css.HeaderStyledNavLink} to={'/ownRecipes/add'}>
             Add recipes
           </Link>
           <Link className={css.HeaderStyledNavLink} to={'my'}>

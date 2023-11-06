@@ -1,13 +1,14 @@
 const express = require('express');
 const { authMiddleware } = require('../service/auth.service.js');
 const {
-  addOwnRecipeHandler,
-  deleteOwnRecipeHandler,
+  addRecipeHandler,
+  deleteRecipeHandler,
   getOwnRecipesHandler,
-} = require('../controllers/ownRecipes.controller.js');
+} = require('../controllers/recipes.controller.js');
 const {
   addRecipeValidator,
 } = require('../middleware/recipeDataValidator.middleware.js');
+const { upload } = require('../middleware/multer.middleware.js');
 
 const ownRecipesRouter = express.Router();
 
@@ -15,9 +16,10 @@ ownRecipesRouter.get('/', authMiddleware, getOwnRecipesHandler);
 ownRecipesRouter.post(
   '/add',
   authMiddleware,
+  upload.single('thumb'),
   addRecipeValidator,
-  addOwnRecipeHandler
+  addRecipeHandler
 );
-ownRecipesRouter.delete('/:recipeId', authMiddleware, deleteOwnRecipeHandler);
+ownRecipesRouter.delete('/:recipeId', authMiddleware, deleteRecipeHandler);
 
 module.exports = ownRecipesRouter;

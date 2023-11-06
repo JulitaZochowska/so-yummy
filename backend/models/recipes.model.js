@@ -5,7 +5,6 @@ const recipesSchema = new Schema(
     title: {
       type: String,
       required: [true, 'Name is required'],
-      unique: true,
     },
     category: {
       type: String,
@@ -24,7 +23,6 @@ const recipesSchema = new Schema(
     },
     thumb: {
       type: String,
-      required: [true, 'Picture is required'],
     },
     preview: {
       type: String,

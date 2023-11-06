@@ -47,7 +47,7 @@ export const BurgerMenu = () => {
         <Link
           className={css.BurgerMenuStyledNavLink}
           onClick={() => closeMenu()}
-          to={'add'}
+          to={'/ownRecipes/add'}
         >
           Add recipes
         </Link>

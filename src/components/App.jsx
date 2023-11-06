@@ -12,6 +12,7 @@ import { Navigate } from 'react-router-dom';
 import RecipesPage from 'pages/RecipesPage/RecipesPage';
 import CategoriesPage from 'pages/CategoriesPage/CategoriesPage';
 import SearchPage from 'pages/SearchPage/SearchPage';
+import AddRecipePage from 'pages/AddRecipePage/AddRecipePage';
 
 const unathorisedRoute = (
   <Route path="/">
@@ -30,6 +31,7 @@ const authorisedRoute = (
     <Route path="/categories" element={<CategoriesPage />} />
     <Route path="/categories/:categoryName" element={<CategoriesPage />} />
     <Route path="/search" element={<SearchPage />} />
+    <Route path="/ownRecipes/add" element={<AddRecipePage />} />
 
     <Route path="*" element={<Navigate replace to={'/main'} />}></Route>
   </Route>

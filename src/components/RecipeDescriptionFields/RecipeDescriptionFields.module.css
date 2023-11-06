@@ -1,0 +1,216 @@
+.container {
+  margin-bottom: 44px;
+  width: 100%;
+}
+.fileItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.fileInput {
+  opacity: 0;
+}
+.fileInput:focus {
+  opacity: 0;
+}
+
+.fileLabel {
+  display: block;
+  background-color: #8baa36;
+  width: 279px;
+  height: 268px;
+  max-width: 279px;
+  max-height: 268px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+}
+
+.placeholder {
+  stroke: #fafafa;
+  fill: #fafafa;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.previewImage {
+  width: 279px;
+  height: 268px;
+  max-width: 279px;
+  max-height: 268px;
+  border-radius: 8px;
+}
+
+.item {
+  border-radius: 0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 24px;
+}
+.itemDropdown {
+  border-radius: 0;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+.itemDropdown:not(:last-child) {
+  margin-bottom: 24px;
+}
+.itemDropdown label {
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  color: #000;
+  opacity: 0.5;
+}
+.options {
+  width: 123px;
+  height: 140px;
+  position: absolute;
+  right: 0;
+  top: 23.5px;
+  z-index: 100;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 6.51852px 7.82222px 0px rgba(0, 0, 0, 0.03);
+  padding: 8px 14px;
+  overflow: scroll;
+}
+.options div {
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  color: #000;
+  opacity: 0.5;
+  transition: 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition-property: color;
+  cursor: pointer;
+}
+.options div:not(:last-child) {
+  margin-bottom: 4px;
+}
+.options div:is(:hover, :focus-visible) {
+  color: #8baa36;
+}
+.input {
+  background-color: #fafafa;
+  height: 21px;
+  margin-bottom: 18px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  color: #000;
+  opacity: 1;
+}
+.input::placeholder {
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  color: #000;
+  opacity: 1;
+}
+.input::placeholder {
+  opacity: 0.5;
+}
+.inputDropdown {
+  height: 21px;
+  margin-bottom: 18px;
+  margin-right: 28px;
+  color: #000;
+  font-size: 12px;
+  line-height: 1;
+  border: none;
+  outline: none;
+  width: fit-content;
+  max-width: 111px;
+  text-align: end;
+  cursor: pointer;
+  background-color: #fafafa;
+}
+.dropdownIcon {
+  position: absolute;
+  right: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    margin-bottom: 104px;
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+  .fileItem {
+    margin-bottom: 0px;
+    margin-right: 32px;
+  }
+  .descriptionItem {
+    width: 100%;
+  }
+  .input {
+    height: 24px;
+    font-size: 16px;
+    letter-spacing: -0.32px;
+  }
+  .input:focus {
+    opacity: 1;
+  }
+  .input::placeholder {
+    font-size: 16px;
+    letter-spacing: -0.32px;
+  }
+  .itemDropdown:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  .itemDropdown label {
+    font-size: 16px;
+    letter-spacing: -0.32px;
+  }
+  .options {
+    width: 132px;
+    height: 162px;
+  }
+  .options div {
+    font-size: 14px;
+    letter-spacing: -0.28px;
+  }
+  .options div:not(:last-child) {
+    margin-bottom: 4px;
+  }
+  .inputDropdown {
+    height: 24px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .item {
+    margin-bottom: 40px;
+  }
+  .itemDropdown:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .fileLabel {
+    width: 357px;
+    height: 344px;
+    max-width: 357px;
+    max-height: 344px;
+  }
+  .fileItem {
+    margin-right: 50px;
+  }
+  .descriptionItem {
+    max-width: 393px;
+  }
+}

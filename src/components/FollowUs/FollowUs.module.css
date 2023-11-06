@@ -1,0 +1,29 @@
+.container {
+  display: none;
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 325px;
+
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .title {
+    color: #3e4462;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.24px;
+    margin: 0 0 40px 0;
+  }
+  .list {
+    display: flex;
+    align-items: center;
+  }
+  .list li:not(:last-child) {
+    margin-right: 20px;
+  }
+}
