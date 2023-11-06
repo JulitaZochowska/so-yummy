@@ -18,3 +18,8 @@
   justify-content: center;
   flex-direction: column;
 }
+.RecipePreparation {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

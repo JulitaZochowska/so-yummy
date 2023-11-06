@@ -1,6 +1,6 @@
 import RecipePageHero from 'components/Recipe/RecipeHero/RecipePageHero';
 import React from 'react';
-import recipesData from '../../components/Recipe/mock/recipes.json';
+import recipesData from '../../components/Recipe/list/soyummy.recipes.json';
 import RecipeIngredientsList from 'components/Recipe/RecipeList/RecipeList';
 import css from './RecipesPage.module.css';
 import RecipePreparation from 'components/Recipe/RecipePreparation/RecipePreparation';
@@ -28,11 +28,13 @@ export const RecipesPage = _ => {
       </div>
 
       <RecipeIngredientsList requiredIngredients={ingredients} />
-      <RecipePreparation
-        thumb={thumb}
-        instructions={instructions}
-        title={title}
-      />
+      <div className={css.RecipePreparation}>
+        <RecipePreparation
+          thumb={thumb}
+          instructions={instructions}
+          title={title}
+        />
+      </div>
     </div>
   );
 };

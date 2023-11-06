@@ -1,4 +1,4 @@
-import ingredientsData from '../mock/soyummy.ingredients.json';
+import ingredientsData from '../list/soyummy.ingredients.json';
 import css from '../RecipeList/RecipeList.module.css';
 
 export default function RecipeIngredientsList({ requiredIngredients }) {
