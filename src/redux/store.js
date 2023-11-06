@@ -12,6 +12,7 @@ import {
 import storage from 'redux-persist/lib/storage';
 import { usersReducer } from '../redux/slice/users.slice';
 import { recipesReducer } from './slice/recipes.slice';
+import { searchReducer } from './slice/search.slice';
 
 const persistConfig = {
   key: 'auth',
@@ -23,6 +24,7 @@ export const store = configureStore({
   reducer: {
     users: persistReducer(persistConfig, usersReducer),
     recipes: recipesReducer,
+    search: searchReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
