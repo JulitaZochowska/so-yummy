@@ -1,0 +1,20 @@
+.RecipesPageBackgroundImange {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-image: url('../../images/RecepiePage/desktop-x1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../../images/RecepiePage/desktop-x2.png');
+  }
+}
+.General {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

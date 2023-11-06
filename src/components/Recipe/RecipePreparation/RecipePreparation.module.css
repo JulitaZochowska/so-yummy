@@ -1,0 +1,67 @@
+.RecipePreparationContainer {
+  margin: 100px 100px 0px 100px;
+  max-width: 1440px;
+  justify-content: center;
+  display: flex;
+}
+.RecipePreparationTitle {
+  margin-bottom: 28px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: rgba(62, 68, 98, 1);
+}
+.RecipePreparationList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  margin-bottom: 40px;
+}
+.RecipePreparationListItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.RecipePreparationListItemNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 21px;
+  max-width: 70px;
+  height: 21px;
+  background-color: rgba(139, 170, 54, 1);
+  border-radius: 50%;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.5;
+
+  color: rgba(255, 255, 255, 1);
+}
+.RecipePreparationListItemText {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  color: rgba(0, 0, 0, 0.8);
+}
+.RecipePreparationListItemImage {
+  margin-bottom: 100px;
+  border-radius: 8px;
+  background-image: url('../../../images/RecepiePage/RecipePreparationList-x1.png');
+  background-size: cover;
+  width: 433px;
+  height: 332px;
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../../../images/RecepiePage/RecipePreparationList-x2.png');
+  }
+}
+.RecipePreparationContainer2 {
+  /* width: 100%; */
+  /* display: flex; */
+}
