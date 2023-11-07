@@ -13,5 +13,3 @@ export const selectMiscellaneousRecipes = state =>
 export const selectChickenRecipes = state => state.recipes.categories.Chicken;
 export const selectDessertRecipes = state => state.recipes.categories.Dessert;
 export const selectCategoriesList = state => state.recipes.categoriesList;
-export const selectSelectedCategoryName = state =>
-  state.recipes.selectedCategoryName;
