@@ -27,11 +27,11 @@ export const Header = () => {
           <Link className={css.HeaderStyledNavLink} to={'shopping-list'}>
             Shopping list
           </Link>
-
+          <Link to={'search'}>
           <MagnifyingGlass
             title="MagnifyingGlass"
             className={css.MagnifyingGlass}
-          />
+          /></Link>
         </div>
 
         <HeaderUser />
