@@ -35,6 +35,9 @@ const authorisedRoute = (
     <Route path="/categories/:categoryName" element={<CategoriesPage />} />
     <Route path="/search" element={<SearchPage />} />
     <Route path="/ownRecipes/add" element={<AddRecipePage />} />
+    <Route path="/my" element={<div>Under construction!</div>} />
+    <Route path="/favorite" element={<div>Under construction!</div>} />
+    <Route path="/shopping-list" element={<div>Under construction!</div>} />
 
     <Route path="*" element={<Navigate replace to={'/main'} />}></Route>
   </Route>
