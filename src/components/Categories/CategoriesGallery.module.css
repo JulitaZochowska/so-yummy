@@ -1,11 +1,10 @@
 .recipesGrid {
-  width: 1350px;
-  padding-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
-  list-style: none;
-  flex-wrap: wrap;
-  max-width: 100%;
-}
+    padding-top: 50px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 14px;
+    list-style: none;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
