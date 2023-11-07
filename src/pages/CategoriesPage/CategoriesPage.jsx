@@ -9,10 +9,10 @@ const CategoriesPage = _ => {
     <div className={css.CategoriesPage}>
       <h1 className={css.CategoriesPage_h1}>Categories</h1>
       <div>
-        <CategoriesList />
+        <CategoriesList categoryName={categoryName} />
       </div>
       <div>
-        <CategoriesGalleryImage />
+        <CategoriesGalleryImage categoryName={categoryName} />
       </div>
     </div>
   );

@@ -28,7 +28,10 @@ const authorisedRoute = (
     <Route index element={<Navigate replace to={'/main'} />} />
     <Route path="/main" element={<MainPage />} />
     <Route path="/recipe/:recipeId" element={<RecipesPage />} />
-    <Route path="/categories" element={<CategoriesPage />} />
+    <Route
+      path="/categories"
+      element={<Navigate replace to={'/categories/Beef'} />}
+    />
     <Route path="/categories/:categoryName" element={<CategoriesPage />} />
     <Route path="/search" element={<SearchPage />} />
     <Route path="/ownRecipes/add" element={<AddRecipePage />} />
