@@ -33,9 +33,9 @@ export const BurgerMenu = () => {
           onClick={() => closeMenu()}
           to={'/'}
         >
-          <Link className={css.HeaderStyledLogoLink} to={'/'}>
+          <div className={css.HeaderStyledLogoLink}>
             <HeaderLogo className={css.HeaderStyledLogo} />
-          </Link>
+          </div>
         </Link>
         <Link
           className={css.BurgerMenuStyledNavLink}
