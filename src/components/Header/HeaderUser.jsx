@@ -1,18 +1,26 @@
-import { useState, useCallback } from 'react';
+import { useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import css from './Header.module.css';
 import { HeaderUserModal } from './HeaderUserModal';
 import { HeaderEditModal } from './HeaderEditModal';
 import { HeaderLogoutModal } from './HeaderLogoutModal';
-import { getAvatar, getName } from 'redux/selectors/users.selectors';
-import { useSelector } from 'react-redux';
+import { selectAvatar, selectName } from 'redux/selectors/users.selectors';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchUserData } from 'redux/actions/users.actions';
+import { ReactComponent as Placeholder } from '../../images/Header/avatar-icon.svg';
+
+// console.log(state.auth);
 
 export const HeaderUser = () => {
   const [showUserModal, notShowUserModal] = useState(false);
   const [showEditModal, notShowEditModal] = useState(false);
   const [showLogoutModal, notShowLogoutModal] = useState(false);
 
-  const userName = useSelector(getName);
-  const userAvatar = useSelector(getAvatar);
+  const userName = useSelector(selectName);
+  const userAvatar = useSelector(selectAvatar);
+
+  // const { name } = useSelector(state => state.name);
+  // const { userName, userAvatar } = useSelector(state => state.auth);
 
   const openUserModal = e => {
     togleUserModal();
@@ -41,9 +49,17 @@ export const HeaderUser = () => {
   return (
     <>
       <div className={css.HeaderStyledUser} onClick={openUserModal}>
-        <div className={css.HeaderStyledUserAvatarConteiner}>{userAvatar}</div>
+        <div className={css.HeaderStyledUserAvatarConteiner}>
+          {userAvatar || (
+            <span>
+              <Placeholder className={css.HeaderStyledUserAvatarPlaceholder} />
+            </span>
+          )}
+        </div>
 
-        <div className={css.HeaderStyledUserText}>{userName}</div>
+        <div className={css.HeaderStyledUserText}>
+          {userName || <span>User</span>}
+        </div>
       </div>
       {showUserModal && (
         <HeaderUserModal
