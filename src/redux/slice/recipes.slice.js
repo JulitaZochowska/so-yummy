@@ -2,11 +2,13 @@ import { createSlice } from '@reduxjs/toolkit';
 import {
   fetchCategoryRecipes,
   fetchCategoriesList,
+  fetchRecipeById,
 } from 'redux/actions/recipes.actions';
 
 const initialState = {
   categories: {},
   categoriesList: [],
+  recipe: {},
 };
 
 const recipesSlice = createSlice({
@@ -25,6 +27,12 @@ const recipesSlice = createSlice({
       })
       .addCase(fetchCategoriesList.rejected, (state, action) => {
         state.categoriesList = [];
+      })
+      .addCase(fetchRecipeById.fulfilled, (state, action) => {
+        state.recipe = action.payload;
+      })
+      .addCase(fetchRecipeById.rejected, (state, action) => {
+        state.recipe = {};
       });
   },
 });

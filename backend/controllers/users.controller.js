@@ -9,13 +9,13 @@ const { sendVerificationMessage } = require('../service/mailer.service.js');
 const registerHandler = async (req, res, next) => {
   try {
     const { name, email, password } = req.body;
-    const { verifyToken } = await createUser({
+    const { verificationToken } = await createUser({
       name,
       email,
       password,
     });
 
-    await sendVerificationMessage(email, verifyToken);
+    await sendVerificationMessage(email, verificationToken);
 
     return res.status(201).json({
       status: 'success',
@@ -78,8 +78,8 @@ const signInHandler = async (req, res, next) => {
 
 const accountVerifyHandler = async (req, res, next) => {
   try {
-    const { verifyToken } = req.params;
-    const user = await getUser({ verifyToken });
+    const { verificationToken } = req.params;
+    const user = await getUser({ verificationToken });
 
     if (!user) {
       return res.status(404).json({
@@ -89,7 +89,7 @@ const accountVerifyHandler = async (req, res, next) => {
       });
     }
 
-    await updateUser(user._id, { verified: true, verifyToken: null });
+    await updateUser(user._id, { verified: true, verificationToken: null });
 
     return res.status(200).json({
       status: 'OK',

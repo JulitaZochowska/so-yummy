@@ -7,7 +7,7 @@ const createUser = async data => {
     return await User.create({
       ...data,
       verified: false,
-      verifyToken: nanoid(24),
+      verificationToken: nanoid(24),
     });
   } catch (error) {
     if (error.code === 11000) {

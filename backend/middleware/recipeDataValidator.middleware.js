@@ -3,9 +3,9 @@ const Joi = require('joi');
 const addRecipeSchema = Joi.object({
   title: Joi.string().required(),
   category: Joi.string().required(),
-  instructions: Joi.string().required(),
+  instructions: Joi.array().required(),
   description: Joi.string().required(),
-  thumb: Joi.object().required(),
+  thumb: Joi.string(),
   time: Joi.string().required(),
   ingredients: Joi.array().required(),
 });

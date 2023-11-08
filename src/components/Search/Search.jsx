@@ -14,7 +14,7 @@ const Search = () => {
         pathname: '/search',
         search: createSearchParams({
           q: search,
-          t: 'MainPage',
+          t: 'Title',
         }).toString(),
       });
     } else {

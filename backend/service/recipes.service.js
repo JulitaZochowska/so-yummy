@@ -8,7 +8,10 @@ const Jimp = require('jimp');
 
 const addRecipe = async body => {
   try {
-    const newRecipe = new Recipe(body);
+    const newRecipe = new Recipe({
+      ...body,
+      instructions: body.instructions.join('\n'),
+    });
     const saveRecipe = await newRecipe.save();
     return saveRecipe;
   } catch (error) {

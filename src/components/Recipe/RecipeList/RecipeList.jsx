@@ -14,12 +14,15 @@ export default function RecipeIngredientsList({ requiredIngredients }) {
         </div>
       </div>
       <ul className={css.RecipeListList}>
-        {requiredIngredients.map(({ id, measure }) => {
+        {requiredIngredients?.map(indegrient => {
+          const id = indegrient.id ?? indegrient.ingredientId;
+          const ingredientMeasure =
+            indegrient.measure ?? indegrient.ingredientMeasure;
           const { title, thumb, description } = allIngredient.find(
-            ({ _id }) => _id.$oid === id.$oid
-          );
+            ({ _id }) => _id.$oid === id
+          ) ?? { title: '', thumb: '', description: '' };
           return (
-            <li className={css.RecipeListListLi} key={id.$oid}>
+            <li className={css.RecipeListListLi} key={id}>
               <div className={css.RecipeListListLiDiv}>
                 <img
                   className={css.RecipeListListLiDivImg}
@@ -30,7 +33,7 @@ export default function RecipeIngredientsList({ requiredIngredients }) {
               </div>
               <div className={css.RecipeListListLiInpiut}>
                 <span className={css.RecipeListListLiInpiutMesure}>
-                  {`${measure}`}
+                  {`${ingredientMeasure}`}
                 </span>
                 <input
                   className={css.RecipeListListLiInpiutInput}

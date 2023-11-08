@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { selectUserToken } from 'redux/selectors/users.selectors';
 import axios from 'axios';
 import css from './PopularRecipe.module.css';
+import { Link } from 'react-router-dom';
 
 const PopularRecipe = () => {
   const [recipes, setRecipes] = useState([]);
@@ -39,17 +40,19 @@ const PopularRecipe = () => {
       {recipes ? (
         <ul className={css.list}>
           {recipes.map(recipe => (
-            <li key={recipe.id} className={css.item}>
-              <img
-                src={recipe.thumb}
-                alt="Recipe preview"
-                className={css.img}
-              ></img>
-              <div>
-                <p className={css.name}>{recipe.title}</p>
-                <p className={css.description}>{recipe.description}</p>
-              </div>
-            </li>
+            <Link to={'/recipe/' + recipe.id}>
+              <li key={recipe.id} className={css.item}>
+                <img
+                  src={recipe.thumb}
+                  alt="Recipe preview"
+                  className={css.img}
+                ></img>
+                <div>
+                  <p className={css.name}>{recipe.title}</p>
+                  <p className={css.description}>{recipe.description}</p>
+                </div>
+              </li>
+            </Link>
           ))}
         </ul>
       ) : (

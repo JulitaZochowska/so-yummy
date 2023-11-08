@@ -18,9 +18,8 @@ const addRecipeHandler = async (req, res, next) => {
 
     const { title, category, instructions, description, time, ingredients } =
       req.body;
-    const thumb = req.file.path;
-    const mimetype = req.file.mimetype;
-    const picture = await resizeRecipePhoto(thumb, _id, title, mimetype);
+    // const mimetype = req.file.mimetype;
+    // const picture = await resizeRecipePhoto(thumb, _id, title, mimetype);
     const currentUser = await getUser({ _id: _id });
 
     const recipeData = {
@@ -28,7 +27,7 @@ const addRecipeHandler = async (req, res, next) => {
       category,
       instructions,
       description,
-      thumb: `http://localhost:3030/public/recipes/${picture}`,
+      thumb: `https://bigoven-res.cloudinary.com/image/upload/h_320,w_320,c_fill/baked-beans-on-toast-2fd454.jpg`,
       time,
       ingredients,
       owner: currentUser._id,

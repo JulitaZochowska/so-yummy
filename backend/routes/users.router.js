@@ -23,7 +23,7 @@ const usersRouter = express.Router();
 usersRouter.post('/register', userRegisterValidator, registerHandler);
 usersRouter.post('/signin', userSignInValidator, signInHandler);
 usersRouter.post('/logout', authMiddleware, logOutHandler);
-usersRouter.get('/verify/:verifyToken', accountVerifyHandler);
+usersRouter.get('/verify/:verificationToken', accountVerifyHandler);
 usersRouter.get('/current', authMiddleware, currentUserHandler);
 usersRouter.patch(
   '/current/update',

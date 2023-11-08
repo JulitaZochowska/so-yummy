@@ -31,6 +31,7 @@ export const addRecipe = createAsyncThunk(
       const { data } = await axios.post('/ownRecipes/add', body, {
         headers: {
           Authorization: `Bearer ${thunkAPI.getState().users.token}`,
+          'Content-Type': 'multipart/form-data',
         },
       });
       return data;
@@ -49,6 +50,22 @@ export const fetchCategoriesList = createAsyncThunk(
     try {
       const response = await axios.get('/recipes/category-list');
       return response.data;
+    } catch (error) {
+      console.error(error);
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const fetchRecipeById = createAsyncThunk(
+  'recipes/FETCH_RECIPE_BY_ID',
+  async (id, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const token = state.users.token;
+    setHeader(token);
+    try {
+      const response = await axios.get('/recipes/' + id);
+      return response.data.recipe;
     } catch (error) {
       console.error(error);
       return thunkAPI.rejectWithValue(error.message);

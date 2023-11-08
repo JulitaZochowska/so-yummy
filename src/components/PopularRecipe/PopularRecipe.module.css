@@ -32,6 +32,11 @@
   letter-spacing: -0.24px;
   margin: 0;
 }
+
+.list a {
+  text-decoration: none;
+}
+
 .description {
   color: #7e7e7e;
   white-space: wrap;
