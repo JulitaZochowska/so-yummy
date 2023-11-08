@@ -18,6 +18,8 @@ import css from './SearchPage.module.css';
 import { createSearchParams, useNavigate } from 'react-router-dom';
 
 
+
+
 const SearchIngredients = () => {
   const navigate = useNavigate();
   const [searchType, setSearchType] = useState('Title'); // Domyślnie ustawione na 'Title'
@@ -71,16 +73,16 @@ const SearchIngredients = () => {
               Ingredients
             </option>
           </select>
+          
           </div>
         </div>
         {searchResult && (
+          <div className={css.errorMessageBox}>
           <div className={css.errorMessage}>
             {searchResult}
-            <img
-              src="../../images/veget.png"
-              alt="Obrazek"
-              className={css.errorImage}
-            />
+            <div className={css.errorImage}>
+            </div>
+          </div>
           </div>
         )}
       </div>
