@@ -44,9 +44,10 @@ const SearchIngredients = () => {
   };
 
   return (
-    <div>
+    <div className={css.conteiner}>
       <div className={css.search}>Search</div>
       <div className={css.searchSection}>
+        <div className={css.searchConteinerInput}>
         <form className={css.searchBox} onSubmit={handleSearch}>
           <input
             name="search"
@@ -70,18 +71,20 @@ const SearchIngredients = () => {
               Ingredients
             </option>
           </select>
+          </div>
         </div>
         {searchResult && (
           <div className={css.errorMessage}>
             {searchResult}
             <img
-              src="src/images/kisspng-vegetable-fruit-basket-century-farms-international-fruits-and-vegetables-5abfb9c60122f5 1.png"
+              src="../../images/veget.png"
               alt="Obrazek"
               className={css.errorImage}
             />
           </div>
         )}
       </div>
+      <div className={css.spinachLeft}></div>
     </div>
   );
 };
