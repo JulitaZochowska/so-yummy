@@ -28,10 +28,12 @@ export const Header = () => {
             Shopping list
           </Link>
 
-          <MagnifyingGlass
-            title="MagnifyingGlass"
-            className={css.MagnifyingGlass}
-          />
+          <Link to={'search'}>
+            <MagnifyingGlass
+              title="MagnifyingGlass"
+              className={css.MagnifyingGlass}
+            />
+          </Link>
         </div>
 
         <HeaderUser />
