@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import './SubscribeFormFooter.styled.css'; // Dodaj import pliku CSS
+import './SubscribeFormFooter.styled.css'; 
 
 const SubscribeForm = () => {
   const [email, setEmail] = useState('');
